@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="previews/hero.jpg" alt="MPC, Gently. From first pad to first track. An illustrated beginner's guide to the Akai MPC Sample." width="100%">
+  <img src="previews/hero.jpg" alt="MPC, Gently: from first pad to first track. A stylised illustration of the Akai MPC Sample beside a rising sun, a mountain and retro orange stripes." width="100%">
 </p>
 
 <p align="center">
