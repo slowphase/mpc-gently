@@ -1,0 +1,6 @@
+# build output (the finished PDF lives on the Releases page)
+source/book/MPC-Gently.pdf
+source/book/book.html
+__pycache__/
+*.pyc
+.DS_Store

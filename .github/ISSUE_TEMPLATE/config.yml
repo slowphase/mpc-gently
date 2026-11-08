@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: MPC Sample hardware faults, firmware and product support
+    url: https://support.akaipro.com/
+    about: Problems with the MPC Sample itself, its firmware or updating it belong with Akai Professional support, not this handbook.
+  - name: Official MPC Sample User Guide
+    url: https://www.akaipro.com/guides/mpc-sample/introduction.htm
+    about: Akai's own documentation, for features the handbook doesn't cover.

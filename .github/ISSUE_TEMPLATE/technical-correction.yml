@@ -1,0 +1,59 @@
+name: Technical correction
+description: Something in the book doesn't match what the MPC Sample actually does.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping! A rough description is perfectly fine. You don't need to know the right answer, only that something didn't work as the book said. Wrong button combinations, menus that look different, sounds that behave unexpectedly and diagram mistakes are all welcome.
+  - type: input
+    id: where
+    attributes:
+      label: Where in the book?
+      description: Lesson, page and step number.
+      placeholder: "e.g. Lesson 4, page 29, step 5"
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - "A button combination or menu"
+        - "How a sample or sound behaved"
+        - "Recording, sequences or Song Mode"
+        - "A diagram or illustration"
+        - "Something else"
+  - type: textarea
+    id: book
+    attributes:
+      label: What the book says
+      placeholder: "e.g. Press B2 until Play appears"
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened
+      placeholder: "e.g. The Play page never appeared, only Tune"
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version on your MPC Sample
+      description: Leave blank if unsure.
+      placeholder: "e.g. 1.3"
+  - type: dropdown
+    id: hardware
+    attributes:
+      label: Did you try this on a real MPC Sample?
+      options:
+        - "Yes, on my MPC Sample"
+        - "No, I spotted it while reading"
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Photos of the screen are very welcome.
