@@ -27,7 +27,9 @@ Published coverage of the MPC Sample helped confirm firmware history and point t
 
 ## Repository artwork
 
-The hero image at the top of the README is stylised promotional artwork, not a technically accurate drawing of the MPC Sample. Use the handbook, or Akai's User Guide, as your hardware reference.
+The hero image at the top of the README is this project's own line drawing of the MPC Sample's top panel, traced from a top-down reference photo of the unit. It is decorative: the leader lines are unlabelled, and the drawing is simplified and not to scale. Use the handbook, or Akai's User Guide, as your hardware reference.
+
+The hero title is set in **Fraunces** by The Fraunces Project Authors and **Jost** by Owen Earl (both SIL OFL 1.1), with labels in IBM Plex Mono.
 
 ## Typefaces
 

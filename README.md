@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="previews/hero.jpg" alt="MPC, Gently: from first pad to first track. A stylised illustration of the Akai MPC Sample beside a rising sun, a mountain and retro orange stripes." width="100%">
+  <img src="previews/hero.jpg" alt="MPC, Gently: from first pad to first track. An oversized technical line drawing of the MPC Sample's top panel, with orange leader lines pointing to the screen, main volume, K1, SHIFT, a pad and the fader, and retro orange stripes sweeping in from the left." width="100%">
 </p>
 
 <p align="center">
