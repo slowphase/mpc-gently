@@ -8,7 +8,7 @@
     <p class="dek">Slow it down, soften it, and give it a room to ring in.</p>
   </div>
   <div class="stripes3"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
-  <div class="meta"><div><b>Time</b>40 to 45 minutes</div><div><b>Starts from</b><span class="scr">GENTLY2</span></div><div><b>Outcome</b>A slow, spacious, layered loop, <span class="scr">GENTLY3</span></div></div>
+  <div class="meta"><div><b>Time</b>About 15 to 20 minutes, plus Go Further</div><div><b>Starts from</b><span class="scr">GENTLY2</span> or <span class="scr">GENTLY2B</span></div><div><b>Outcome</b>A slow, spacious, layered loop, <span class="scr">GENTLY3</span></div></div>
 
   <h2><span class="tag">The Idea</span>Sounds that hang in the air</h2>
   <p>Drums <em>hit</em>. Atmospheric sounds <em>hang</em>: they swell in gently, ring on, and fade away slowly, filling the space between the drums like mist. The right starting sound helps a lot, and then three simple moves do the rest:</p>
@@ -34,13 +34,22 @@
     <div><dt>Amp Env page</dt><dd>[[@K1]] <strong>Attack</strong>: how slowly the sound fades in. [[@K2]] <strong>Decay</strong>: how it fades out.</dd></div>
     <div><dt>Filter page</dt><dd>[[@K3]] <strong>Type</strong>, [[@K1]] <strong>Cutoff</strong>, [[@K2]] <strong>Reso</strong>. More on these in Lesson 5.</dd></div>
     <div><dt>Play page</dt><dd>[[@K1]] <strong>Polyphony</strong>: Mono or Poly. [[SHIFT]] + [[@K2]] <strong>Pad Link</strong>.</dd></div>
+    <div><dt>[[SHIFT]] + [[CHOP]]</dt><dd>NOTE ON: switches the selected pad between Note On and One Shot.</dd></div>
     <div><dt>[[SHIFT]] + [[ERASE]]</dt><dd>COPY: copies the selected pad to the pads you tap.</dd></div>
-    <div><dt>[[SHIFT]] + [[KNOB FX]]</dt><dd>FX SELECT: the Knob FX settings, where you choose the effect and the pads it affects.</dd></div>
-    <div><dt>[[KNOB FX]]</dt><dd>Lit: K1 to K3 control the effect. Press again to disengage, and the knobs return to your sample settings.</dd></div>
+    <div><dt>[[SHIFT]] + [[KNOB FX]]</dt><dd>FX SELECT: choose the effect and the pads it affects. Here [[B3]] <strong>bypasses</strong> the effect on those pads.</dd></div>
+    <div><dt>[[KNOB FX]]</dt><dd>Lit: K1 to K3 adjust the effect. Press again and the knobs return to your sample settings. This hands over the knobs; it isn&#8217;t the bypass.</dd></div>
   </dl>
 
+    <h3>Length, overlap and how a pad plays</h3>
+  <p>A drum hit lasts a fraction of a second; a good atmospheric sound lasts several. That length is what lets one tap fill a whole bar, and it&#8217;s why a slow fade-in works on a long sound but would swallow a short one.</p>
+  <p>Two settings decide what happens when sounds overlap or when you let go of a pad:</p>
+  <ul class="plain">
+    <li><strong>One Shot or Note On.</strong> In <strong>One Shot</strong> (the normal setting) a tap plays the whole sound, however briefly you touch the pad. In <strong>Note On</strong> the sound plays only while you hold the pad, and stops when you let go. A small note icon on the Sample page shows Note On is active. Tonight uses One Shot.</li>
+    <li><strong>Mono or Poly.</strong> With <strong>Poly</strong>, a new tap lets the previous one keep ringing, so sounds overlap into a haze. With <strong>Mono</strong>, each tap cuts off the last.</li>
+  </ul>
+
   <h2><span class="tag">Let&#8217;s Make Something</span>A haze around the heartbeat</h2>
-  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY2</span> is loaded (if not: [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]]). [[SEQ RECORD]] isn&#8217;t flashing, and [[NOTE REPEAT]] and [[KNOB FX]] are dark.</div>
+  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY2</span> or <span class="scr">GENTLY2B</span> is loaded (if not: [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]]). [[SEQ RECORD]] isn&#8217;t flashing, and [[NOTE REPEAT]] and [[KNOB FX]] are dark.</div>
   <h3><span class="part">A</span>Find a sound that rings</h3>
   <ol class="steps">
     <li>Press [[SAMPLE]], make sure bank A is lit, and tap [[#A5]]. Press [[SAMPLE SELECT]].</li>
@@ -56,7 +65,7 @@
     <li>Press [[B1]] until <span class="scr">Amp Env</span> appears. Turn [[@K1]] (Attack) to about <strong>80</strong>. Tap the pad: it now swells in instead of starting abruptly.</li>
     <li>Still on Amp Env, turn [[@K2]] (Decay) while tapping the pad, and find the setting that lets the sound ring on longest.</li>
     <li>Press [[B3]] until <span class="scr">Filter</span> appears. Turn [[@K3]] (Type) to <span class="scr">LPF2</span>. Now turn [[@K1]] (Cutoff) slowly down while tapping: the sound grows darker and further away. Stop when it&#8217;s soft but still clear, somewhere around <strong>60</strong>. Add a touch of [[@K2]] (Reso), about 20, for a gentle glow.</li>
-    <li>Press [[B2]] until <span class="scr">Play</span> appears. Set [[@K1]] (Polyphony) to <span class="scr">Poly</span>, so each new tap lets the previous one keep ringing.</li>
+    <li>Press [[B2]] until <span class="scr">Play</span> appears. Set [[@K1]] (Polyphony) to <span class="scr">Poly</span>, so each new tap lets the previous one keep ringing. If the note icon is showing, press [[SHIFT]] + [[CHOP]] (NOTE ON) to switch back to One Shot.</li>
   </ol>
 
   <h3><span class="part">C</span>Layer it</h3>
@@ -67,7 +76,7 @@
   </ol>
 
   <h3><span class="part">D</span>Give it a room</h3>
-  <p>Knob FX takes three separate actions: choose the effect and its pads, engage the knobs to adjust it, then disengage them.</p>
+  <p>Knob FX involves three separate things: <strong>choosing</strong> the effect and its pads (FX SELECT), <strong>adjusting</strong> it (with [[KNOB FX]] lit, K1 to K3 belong to the effect), and <strong>bypassing</strong> it ([[B3]] in FX SELECT), which you won&#8217;t need tonight.</p>
   <ol class="steps" style="--start:11">
     <li><strong>Open FX SELECT.</strong> Hold [[SHIFT]] and press [[KNOB FX]]. The Knob FX settings appear.</li>
     <li><strong>Choose the effect.</strong> Turn the ENCODER to [[~Reverb Large]] and press the ENCODER to load it.</li>
@@ -75,22 +84,26 @@
     <li><strong>Engage and adjust.</strong> Press [[KNOB FX]] so it lights, then press [[SAMPLE]] and tap [[#A5]]. K1 to K3 now control the reverb: turn [[@K3]] (Mix) to about halfway and [[@K2]] (Time) well up. Leave [[@K1]] (Pre-Delay) low.</li>
     <li><strong>Disengage.</strong> Press [[KNOB FX]] so it goes dark. K1 to K3 return to your sample settings.</li>
   </ol>
-  <div class="oops"><b class="h">Knobs changing the wrong thing?</b>While [[KNOB FX]] is lit, K1 to K3 belong to the effect and won&#8217;t adjust your sample settings. From now on, <strong>before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> Only one Knob FX can be active at a time, so this reverb is the &#8220;room&#8221; for your whole track. Akai&#8217;s guide doesn&#8217;t say whether the reverb keeps sounding while the button is dark. Tap pad A5 and listen: if the reverb has gone, it simply returns when you light [[KNOB FX]] again (you&#8217;ll do that before playing your finished song).</div>
+  <div class="oops"><b class="h">Knobs changing the wrong thing?</b>While [[KNOB FX]] is lit, K1 to K3 belong to the effect and won&#8217;t adjust your sample settings. From now on, <strong>before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> Only one Knob FX can be active at a time, so this reverb is the &#8220;room&#8221; for your whole track. Disengaging hands back the knobs; switching the effect off is a separate job, the Bypass ([[B3]] in FX SELECT). Akai&#8217;s guide doesn&#8217;t say whether the reverb keeps sounding while [[KNOB FX]] is dark, so tap pad A5 and listen. If it&#8217;s gone, light [[KNOB FX]] whenever you want to hear it.</div>
 
   <h3><span class="part">E</span>Add it to your loop</h3>
   <ol class="steps" style="--start:16">
-    <li>Press [[SEQ]], check bank A is lit, and tap [[#1]] to select your loop. Press [[SEQ RECORD]], then [[PLAY]].</li>
+    <li>Press [[SEQ]], press [[PAD BANK]] until A is lit, and tap [[#1]] to select your loop. Press [[SEQ RECORD]], then [[PLAY]].</li>
     <li>After the count-in, tap [[#A5]] exactly on the <strong>one</strong> of each bar. Recording adds your new hits to the drums already there. Press [[SEQ RECORD]] to stop recording and just listen, then [[STOP]].</li>
     <li>Not happy with the take? [[SHIFT]] + [[&#8722;]] (UNDO) removes everything recorded since you pressed PLAY. Try again from step 17.</li>
     <li>Save as <span class="scr">GENTLY3</span>.</li>
   </ol>
 
-  <div class="play"><h2><span class="tag">Have a Play</span>Drift a little</h2>
+  <div class="play"><h2><span class="tag">Go Further</span>Two weathers</h2>
+    <p>About 15 minutes. Make two contrasting atmospheres from your haze and play them over the loop by hand, without recording.</p>
     <ul>
-      <li><strong>A drone.</strong> Tap [[#A5]], press [[LOOP]], then tap the pad once. It now loops until you tap it again. Lovely to play over your sequence by hand.</li>
-      <li><strong>Backwards.</strong> [[SHIFT]] + [[LOOP]] (REVERSE) plays the sound in reverse, so it rises up instead of fading away.</li>
-      <li><strong>Other rooms.</strong> In FX SELECT, try [[~Spring Reverb]], [[~Ensemble]] or [[~Vinyl Emulator]] on the same pads. Return to [[~Reverb Large]] before you save, and disengage [[KNOB FX]].</li>
+      <li><strong>Copy.</strong> Select [[#A5]] and copy it to [[#A7]] and [[#A8]]. On each copy, set Pad Link ([[SHIFT]] + [[@K2]] on the Play page) to <span class="scr">Off</span>, so they play on their own.</li>
+      <li><strong>A7, cold and far:</strong> higher (Semi Tune 0 or +12), a high-pass filter, a very slow attack. In FX SELECT, tap [[#7]] so it gets the reverb too.</li>
+      <li><strong>A8, warm and close:</strong> lower (&#8722;24), a low cutoff, a quicker attack, no reverb. Then try Note On ([[SHIFT]] + [[CHOP]]): hold the pad for as long as you want it to sound.</li>
+      <li><strong>Listen.</strong> Press [[PLAY]] and play A7 for a few bars, then A8. Which suits your heartbeat? There&#8217;s no right answer, only your choice.</li>
+      <li><strong>Also try</strong>, on A7 or A8 rather than your haze: [[LOOP]] for a drone that rings until you tap it again, or [[SHIFT]] + [[LOOP]] (REVERSE) so it rises instead of fades. Or another reverb such as [[~Spring Reverb]] in FX SELECT.</li>
     </ul>
+    <p>The reverb is shared by the whole project, so return to [[~Reverb Large]] and disengage [[KNOB FX]], then save as <span class="scr">GENTLY3B</span>.</p>
   </div>
 
   <div class="wrap"><div class="cols">
@@ -98,7 +111,8 @@
       <li>An <strong>octave</strong> is 12 semitones: the same note, higher or lower.</li>
       <li>Slow attack, low-pass filter and reverb make sounds atmospheric.</li>
       <li>[[B1]] [[B2]] [[B3]] flip through the Sample Mode pages.</li>
-      <li><strong>COPY</strong> and <strong>Pad Link</strong> make layers.</li>
+      <li><strong>COPY</strong> and <strong>Pad Link</strong> make layers; <strong>Poly</strong> lets sounds overlap.</li>
+      <li><strong>One Shot</strong> plays the whole sound; <strong>Note On</strong> only while held.</li>
       <li>Knob FX: choose effect and pads, engage, adjust, disengage.</li>
     </ul></div>
     <div class="creation"><h2><span class="tag">Your Creation</span>GENTLY3</h2><p>Your heartbeat drums, now wrapped in a soft, low, reverberant haze on pads A5 and A6, saved as <span class="scr">GENTLY3</span>.</p></div>
@@ -115,7 +129,7 @@
     <p class="dek">Notes, steps and octaves, and a bassline from a single sound.</p>
   </div>
   <div class="stripes3"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
-  <div class="meta"><div><b>Time</b>40 to 45 minutes</div><div><b>Starts from</b><span class="scr">GENTLY3</span></div><div><b>Outcome</b>Drums, bass and atmosphere together, <span class="scr">GENTLY4</span></div></div>
+  <div class="meta"><div><b>Time</b>About 20 minutes, plus Go Further</div><div><b>Starts from</b><span class="scr">GENTLY3</span> or <span class="scr">GENTLY3B</span></div><div><b>Outcome</b>Drums, bass and atmosphere together, <span class="scr">GENTLY4</span></div></div>
 
   <h2><span class="tag">The Idea</span>A ladder of notes</h2>
   <p>The <strong>bass</strong> is the low part underneath everything. It gives music its weight and much of its mood. A bassline usually plays one note at a time and moves between just a few notes.</p>
@@ -128,10 +142,12 @@
     <li><strong>2 down</strong> is a small step that wants to return home.</li>
   </ul>
   <p>The MPC Sample has a lovely way to explore this called <strong>16 Levels</strong>. It spreads one sound across all sixteen pads, each at a different pitch, turning the pads into a little keyboard for your ears. Then, to record the bassline, you&#8217;ll make your own tuned copies of the bass with <strong>Semi Tune</strong>, which Akai documents in exact semitones.</p>
-  <!--FIG:levels_map|16 Levels, Tune type. Akai confirms only that pad 4 plays the original pitch, lower pads drop and higher pads climb. The numbers assume one semitone per pad, as on classic MPCs; step 5 lets you check by ear.-->
+  <!--FIG:levels_map|16 Levels, Tune type: what Akai documents. How far apart in pitch the pads are isn&#8217;t confirmed, so explore them by ear.-->
+  <h3>Pitch and length are different things</h3>
+  <p>Changing a sound&#8217;s <strong>pitch</strong> makes it higher or lower. Changing its <strong>length</strong> makes it last longer or shorter. On a record player the two are tied together: slow the record down and the music gets lower <em>and</em> longer. The MPC Sample&#8217;s <strong>Warp</strong> setting lets you choose. In <span class="scr">Time Stretch</span> mode it changes a sound&#8217;s length but keeps its pitch; in <span class="scr">Pitch</span> mode it changes both, like the record. Today you&#8217;ll only change pitch, with Semi Tune. Akai&#8217;s guide doesn&#8217;t say whether Semi Tune also changes a sound&#8217;s length, so listen for that as you tune. You&#8217;ll try Warp in Lesson 5.</p>
 
   <h2><span class="tag">Meet the Controls</span>Banks and levels</h2>
-  <!--PANEL:PADBANK,16LEVELS,SHIFT,ERASE,B2,K1,K2,BANKLEDS|1,2,3,4,16|Bank B pads 1 to 3 will hold your bass notes. With 16 Levels on, pads 4 and 16 are your octave test.-->
+  <!--PANEL:PADBANK,16LEVELS,SHIFT,ERASE,B2,K1,K2,BANKLEDS|1,2,3,4,16|Bank B pads 1 to 3 will hold your bass notes. With 16 Levels on, pad 4 plays the original pitch.-->
   <dl class="controls">
     <div><dt>[[PAD BANK]]</dt><dd>Moves to the next bank of 16 pads. The bass lives in bank B, away from your drums.</dd></div>
     <div><dt>[[SHIFT]] + [[16 LEVELS]]</dt><dd>TYPE: cycles through <span class="scr">Velocity</span>, <span class="scr">Filter</span> and <span class="scr">Tune</span>.</dd></div>
@@ -141,59 +157,73 @@
   </dl>
 
   <h2><span class="tag">Let&#8217;s Make Something</span>A bassline</h2>
-  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY3</span> is loaded. <strong>Before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> [[SEQ RECORD]] isn&#8217;t flashing.</div>
+  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY3</span> or <span class="scr">GENTLY3B</span> is loaded. <strong>Before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> [[SEQ RECORD]] isn&#8217;t flashing.</div>
   <h3><span class="part">A</span>A bass sound in bank B</h3>
   <ol class="steps">
     <li>Press [[SAMPLE]], then [[PAD BANK]] until the letter beside MAIN VOLUME shows <strong>B</strong>. Tap [[#B1]].</li>
     <li>Press [[SAMPLE SELECT]] and look for a bass sound. If you can&#8217;t find a bass folder, choose a <strong>long, booming kick drum</strong>: tuned kicks make wonderful deep basses. Load it and close the browser.</li>
   </ol>
-  <div class="note"><b class="h">Use your IEMs for this one</b>The built-in speaker is small and can&#8217;t reproduce deep bass. If the bass seems to vanish, it&#8217;s the speaker, not you.</div>
+  <div class="note"><b class="h">Use headphones or monitors for this one</b>The built-in speaker is small and can&#8217;t reproduce deep bass. If the bass seems to vanish, it&#8217;s the speaker, not you.</div>
 
-  <h3><span class="part">B</span>Explore the notes with 16 Levels</h3>
+  <h3><span class="part">B</span>Do these sounds belong together?</h3>
+  <p>Your haze from Lesson 3 may have a clear note in it, and so does your bass. Notes interact: some pairs feel settled, others rub uncomfortably. You don&#8217;t need any music theory to fix this, only your ears.</p>
   <ol class="steps" style="--start:2">
-    <li>With [[#B1]] selected, hold [[SHIFT]] and press [[16 LEVELS]] (TYPE), watching the screen, until it shows <span class="scr">Tune</span>.</li>
-    <li>Press [[16 LEVELS]]. It lights, and all sixteen pads in bank B now play your bass at different pitches.</li>
-    <li><strong>Listen first.</strong> Tap [[#4]]: that&#8217;s the original pitch, your home note. Now tap [[#16]]. If it sounds like the same note, only higher (an octave), that fits the semitone layout in the diagram, though it doesn&#8217;t prove every pad in between is exactly one semitone apart. Either way, explore the pads in between by ear. The bassline you&#8217;ll record uses pads you tune yourself, so nothing below depends on this layout.</li>
-    <li>Wander around: [[#4]] then [[#7]], [[#4]] then [[#11]], [[#4]] then [[#2]]. Tap slowly and notice how each pair feels. There&#8217;s no wrong answer.</li>
-    <li>Press [[16 LEVELS]] again to switch it off. The button goes dark and the <span class="scr">16</span> icon disappears.</li>
+    <li>Press [[SEQ]], light bank A, tap [[#1]] and press [[PLAY]]. Press [[SAMPLE]], then [[PAD BANK]] until B is lit, and tap [[#B1]] on the <strong>one</strong> of each bar, along with the haze.</li>
+    <li>Does it feel settled, or uncomfortable? If it rubs, press [[B2]] until <span class="scr">Tune</span> appears and try B1&#8217;s Semi Tune at &#8722;1, +1, &#8722;2, +2 and so on, tapping along each time. Keep the setting that feels most at home. Settled already? Leave it at 0.</li>
+    <li>Press [[STOP]]. If nothing feels right, try another bass sound (step 2); a kick-based bass has less of a clear note and fits more easily.</li>
   </ol>
 
-  <h3><span class="part">C</span>Make your bass notes</h3>
-  <ol class="steps" style="--start:7">
+  <h3><span class="part">C</span>Explore the notes with 16 Levels</h3>
+  <ol class="steps" style="--start:5">
+    <li>With [[#B1]] selected, hold [[SHIFT]] and press [[16 LEVELS]] (TYPE), watching the screen, until it shows <span class="scr">Tune</span>.</li>
+    <li>Press [[16 LEVELS]]. It lights, and all sixteen pads in bank B now play your bass at different pitches.</li>
+    <li><strong>Listen first.</strong> Tap [[#4]]: Akai confirms that&#8217;s the original pitch, your home note. Tap [[#1]] (lower), then [[#16]] (higher). The bassline you&#8217;ll record uses pads you tune yourself, so nothing below depends on exactly how far apart these pads are.</li>
+    <li>Wander around: [[#4]] then [[#7]], [[#4]] then [[#11]], [[#4]] then [[#2]]. Tap slowly and notice how each pair feels. There&#8217;s no wrong answer.</li>
+    <li>Press [[16 LEVELS]] again to switch it off: the button should go dark and the <span class="scr">16</span> icon disappear. (Akai&#8217;s guide doesn&#8217;t describe switching it off, so check both. If the icon stays, see <a href="#trouble">When Things Go Wrong</a>.)</li>
+  </ol>
+
+  <h3><span class="part">D</span>Make your bass notes</h3>
+  <ol class="steps" style="--start:10">
     <li>Tap [[#B1]]. Hold [[SHIFT]] + [[ERASE]] (COPY), tap [[#2]] and [[#3]] so they turn red, and let go. Bank B now has three copies of your bass.</li>
-    <li>Tap [[#B2]], press [[B2]] until <span class="scr">Tune</span> appears, and set [[@K1]] (Semi Tune) to <strong>+3</strong>: the dark note. Tap [[#B3]] and set its Semi Tune to <strong>&#8722;2</strong>: the step down. Leave B1 at 0, your home note.</li>
+    <li>Tap [[#B2]], press [[B2]] until <span class="scr">Tune</span> appears, and set [[@K1]] (Semi Tune) to <strong>3 above B1</strong>: the dark note. Tap [[#B3]] and set its Semi Tune to <strong>2 below B1</strong>: the step down. B1 is your home note. If B1 is at 0, that&#8217;s +3 and &#8722;2:
+      <table class="ref tune"><tr><th>B1 (home)</th><td>&#8722;3</td><td>&#8722;2</td><td>&#8722;1</td><td><b>0</b></td><td>+1</td><td>+2</td><td>+3</td></tr><tr><th>B2 (dark)</th><td>0</td><td>+1</td><td>+2</td><td><b>+3</b></td><td>+4</td><td>+5</td><td>+6</td></tr><tr><th>B3 (step down)</th><td>&#8722;5</td><td>&#8722;4</td><td>&#8722;3</td><td><b>&#8722;2</b></td><td>&#8722;1</td><td>0</td><td>+1</td></tr></table></li>
     <li>Tap [[#B1]], press [[B2]] until <span class="scr">Play</span> appears, and set [[@K2]] (Mute Group) to <strong>1</strong>. Do the same for [[#B2]] and [[#B3]]. Now each new bass note cuts off the last, as a real bass player&#8217;s would.</li>
   </ol>
 
-  <h3><span class="part">D</span>Learn a simple bassline</h3>
+  <h3><span class="part">E</span>Learn a simple bassline</h3>
   <p>Here&#8217;s a two-bar pattern called &#8220;Night Walk&#8221;. It goes home, home, dark, step down, then round again:</p>
   <!--FIG:bass_pattern|Each bar has four beats; notes fall on beats one and three.-->
-  <ol class="steps" style="--start:10">
+  <ol class="steps" style="--start:13">
     <li>Press [[PLAY]] so your loop plays, and practise the pattern on pads B1, B1, B2, B3 until it feels natural. Count &#8220;one, two, three, four&#8221;: notes on <strong>one</strong> and <strong>three</strong>. Press [[STOP]].</li>
   </ol>
 
-  <h3><span class="part">E</span>Record it</h3>
+  <h3><span class="part">F</span>Record it</h3>
   <div class="note"><b class="h">A house rule for banks</b>Sequences come in banks of 16 too, and Akai&#8217;s guide doesn&#8217;t say whether Sequence Mode shares the bank letter with Sample Mode. So this book keeps every sequence in bank A, with one simple habit: <strong>when you press [[SEQ]] to choose a sequence, make sure A is lit first.</strong> Once you&#8217;ve pressed [[SEQ RECORD]] and the pads play sounds, use [[PAD BANK]] freely to reach the sounds you want.</div>
 
-  <ol class="steps" style="--start:11">
+  <ol class="steps" style="--start:14">
     <li>Press [[SEQ]], press [[PAD BANK]] until <strong>A</strong> is lit (see the note above), and tap [[#1]].</li>
     <li>Press [[SEQ RECORD]]. The pads now play sounds: press [[PAD BANK]] until <strong>B</strong> is lit. Press [[PLAY]], and after the count-in play Night Walk. Once through the two bars is enough.</li>
-    <li>Press [[SEQ RECORD]] to stop recording and listen, then [[STOP]]. Want another try? [[SHIFT]] + [[&#8722;]] (UNDO), then repeat step 13.</li>
+    <li>Press [[SEQ RECORD]] to stop recording and listen, then [[STOP]]. Want another try? [[SHIFT]] + [[&#8722;]] (UNDO), then repeat step 16.</li>
   </ol>
 
-  <h3><span class="part">F</span>Balance it</h3>
-  <ol class="steps" style="--start:14">
+  <h3><span class="part">G</span>Balance it</h3>
+  <ol class="steps" style="--start:17">
     <li>Press [[PLAY]], then [[SAMPLE]]. Tap [[#B1]] and press [[B1]] until <span class="scr">Mix</span> appears. Turn [[@K1]] (Volume) until the bass sits <em>alongside</em> the kick, neither hiding it nor booming over it. Do the same for B2 and B3 so all three notes match. Press [[STOP]].</li>
     <li>Save as <span class="scr">GENTLY4</span>.</li>
   </ol>
   <div class="oops"><b class="h">Where did my drums go?</b>If you&#8217;re on bank B and tap pads, you&#8217;ll hear bass, not drums. That&#8217;s normal: the drums are in bank A. Press [[PAD BANK]] until A is lit. And if your sequences ever seem to vanish in Sequence Mode, check the bank letter there too.</div>
 
-  <div class="play"><h2><span class="tag">Have a Play</span>Your own line</h2>
+  <div class="play"><h2><span class="tag">Go Further</span>Three other basslines</h2>
+    <p>About 15 to 20 minutes. Try three alternatives in your sketchpad sequences, then keep the one you like best.</p>
     <ul>
-      <li><strong>Write your own.</strong> Copy B1 to more pads and tune them to +5, +7 or +12, adding them to Mute Group 1. Staying within a few notes keeps a line sounding intentional.</li>
-      <li><strong>Off the beat.</strong> Try a note on the &#8220;and&#8221; after three. Moving a note off the beat makes a line feel like it&#8217;s walking.</li>
-      <li><strong>Other types.</strong> Try 16 Levels with the <span class="scr">Filter</span> type on a spare pad: each pad is a different brightness of the same sound. Switch it off again with [[16 LEVELS]] before carrying on.</li>
+      <li><strong>Copy.</strong> Press [[SEQ]], light bank A, and check pads 12 to 14 are dim. Copy sequence 1 to [[#12]], [[#13]] and [[#14]].</li>
+      <li><strong>Clear the bass in each, one at a time.</strong> Press [[SEQ]], light bank A and tap the sequence (12, then 13, then 14). Arm [[SEQ RECORD]] without pressing PLAY, press [[PAD BANK]] until B is lit, hold [[ERASE]] and tap [[#B1]], [[#B2]] and [[#B3]]. Press [[STOP]]. The drums and haze stay.</li>
+      <li><strong>12, a heartbeat:</strong> just the home note on the <strong>one</strong> of each bar. Less can be more.</li>
+      <li><strong>13, walking:</strong> Night Walk&#8217;s notes, but move some to the &#8220;and&#8221; between beats.</li>
+      <li><strong>14, your own:</strong> copy B1 to [[#B4]], tune it 5 or 7 above B1, put it in Mute Group 1, and write a line with four notes.</li>
+      <li><strong>Choose.</strong> Queue 1, 12, 13 and 14. Sequence 1 keeps Night Walk, and later lessons build on it; your favourite can join the song in Lesson 8&#8217;s Go Further.</li>
     </ul>
+    <p>Save as <span class="scr">GENTLY4B</span>.</p>
   </div>
 
   <div class="wrap"><div class="cols">
@@ -202,6 +232,7 @@
       <li>A <strong>home note</strong> and a few others make a bassline.</li>
       <li>16 Levels (Tune) lets you explore pitches, with the original on pad 4.</li>
       <li><strong>Semi Tune</strong> and a <strong>Mute Group</strong> make a playable bass.</li>
+      <li><strong>Pitch</strong> and <strong>length</strong> are separate; Warp chooses how they link.</li>
       <li>Pad banks keep different parts apart.</li>
     </ul></div>
     <div class="creation"><h2><span class="tag">Your Creation</span>GENTLY4</h2><p>Drums, haze and the Night Walk bassline together in one loop. It already sounds like the beginning of a track.</p></div>
@@ -218,13 +249,24 @@
     <p class="dek">Waveforms, envelopes, filters and effects, and one sound made into three.</p>
   </div>
   <div class="stripes3"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
-  <div class="meta"><div><b>Time</b>45 minutes</div><div><b>Starts from</b><span class="scr">GENTLY4</span></div><div><b>Outcome</b>Three new sounds from one sample, <span class="scr">GENTLY5</span></div></div>
+  <div class="meta"><div><b>Time</b>About 20 minutes, plus Go Further</div><div><b>Starts from</b><span class="scr">GENTLY4</span> or <span class="scr">GENTLY4B</span></div><div><b>Outcome</b>Three new sounds from one sample, <span class="scr">GENTLY5</span></div></div>
 
   <h2><span class="tag">The Idea</span>Reading a sound</h2>
   <p>Sound is air wobbling back and forth. A <strong>waveform</strong> is a drawing of that wobble over time. Two things are worth reading in it: how <em>tall</em> the wave is (loudness) and how <em>tightly packed</em> its wiggles are (pitch). Pitch only shows up as a regular wiggle for sounds with a clear note, like a hum or a bass; noisy sounds such as a snare or rain don&#8217;t have a single pitch at all.</p>
   <!--FIG:waveform_explainer|Height means loudness. For pitched sounds, speed of wiggle means pitch.-->
   <p>Zoom out and you see the whole sound&#8217;s life: a sudden start, then a long fade. The MPC lets you choose which part of it plays by moving its <strong>Start</strong> and <strong>End</strong> points. Nothing is thrown away; the rest is just skipped.</p>
   <!--FIG:waveform_fig|Start and End points. Only the bright section plays.-->
+  <h3>Five ways to cut a sound</h3>
+  <p>These five sound alike but do very different things. Only one is permanent.</p>
+  <table class="ref cuts">
+    <tr><th>What you do</th><th>What happens</th><th>Undo?</th></tr>
+    <tr><td><strong>Move Start and End</strong><br>Trim page, [[@K1]] and [[@K2]]</td><td>Only the part between them plays. The rest is kept, just skipped.</td><td>Move them back</td></tr>
+    <tr><td><strong>Trim Sample</strong><br>[[SHIFT]] + [[#13]]</td><td>Everything outside Start and End is cut away for good.</td><td>Treat as permanent</td></tr>
+    <tr><td><strong>Chop</strong><br>[[CHOP]] (Lesson 6)</td><td>Marks slices across the sound; each pad plays one slice. Still one sample.</td><td>Leave Chop Mode</td></tr>
+    <tr><td><strong>Extract</strong><br>[[SHIFT]] + [[B1]] in Chop Mode</td><td>Copies one slice to the next free pad as a new sample. The original stays whole.</td><td>Erase the new pad</td></tr>
+    <tr><td><strong>Save Sample</strong><br>[[SHIFT]] + [[SAMPLE SELECT]]</td><td>Saves a pad&#8217;s sound as its own file, to reuse in other projects.</td><td>Nothing to undo</td></tr>
+  </table>
+  <p>You don&#8217;t need Save Sample to keep your work: saving the project keeps every sound in it. Save Sample is for a sound you&#8217;d like in <em>another</em> project.</p>
   <h3>Envelopes: the shape of loudness over time</h3>
   <p>An <strong>envelope</strong> reshapes how loud a sound is from moment to moment. <strong>Attack</strong> is how long it takes to fade in. <strong>Decay</strong> is how it fades away. A fast attack and short decay give a plucked, percussive sound; a slow attack gives a soft swell.</p>
   <!--FIG:envelope_fig|Three envelope shapes. Same sound, three different lives.-->
@@ -253,7 +295,7 @@
   </dl>
 
   <h2><span class="tag">Let&#8217;s Make Something</span>Three from one</h2>
-  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY4</span> is loaded. <strong>Before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> [[16 LEVELS]] is dark.</div>
+  <div class="note"><b class="h">Before you start</b><span class="scr">GENTLY4</span> or <span class="scr">GENTLY4B</span> is loaded. <strong>Before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong> [[16 LEVELS]] is dark.</div>
   <h3><span class="part">A</span>Choose a source</h3>
   <ol class="steps">
     <li>Press [[SAMPLE]], then [[PAD BANK]] until <strong>C</strong> is lit. Tap [[#C1]] and press [[SAMPLE SELECT]].</li>
@@ -279,26 +321,30 @@
 
   <h3><span class="part">D</span>Sound three: a hand-played echo, printed (pad C4)</h3>
   <ol class="steps" style="--start:11">
-    <li>Press [[SEQ]], press [[PAD BANK]] until <strong>A</strong> is lit, and tap [[#15]], an empty sequence, as a helper. Set [[@K1]] (Length) to <strong>2</strong> bars. The tempo should read 84 (it&#8217;s shared, thanks to GBL).</li>
+    <li>Press [[SEQ]] and press [[PAD BANK]] until <strong>A</strong> is lit. Pad [[#15]] should be dim, an empty sequence kept for this helper; if it&#8217;s lit, use any dim pad from 9 to 16 instead, wherever these steps say 15. Tap it, and set [[@K1]] (Length) to <strong>2</strong> bars. The tempo should read 84 (it&#8217;s shared, thanks to GBL).</li>
     <li>Press [[SEQ RECORD]], then [[PAD BANK]] until <strong>C</strong> is lit. Press [[PLAY]]. After the count-in, tap [[#C1]] on beats <strong>one, two, three and four</strong> of the first bar, each tap softer than the last: firm, medium, soft, barely there. That fading repeat is an echo. Press [[SEQ RECORD]], then [[STOP]].</li>
     <li>Press [[PLAY]] to check, then [[STOP]]. If every tap sounds equally loud, Full Level may be on ([[SHIFT]] + [[#1]] switches it off): undo with [[SHIFT]] + [[&#8722;]] and record again.</li>
-    <li>With sequence 15 still selected, hold [[SHIFT]] and press [[#11]] (RESAMPLE), then tap [[#4]], with bank C still lit. The MPC records the sequence onto pad C4. Give it a moment.</li>
+    <li>With your helper sequence still selected (it&#8217;s the one you just played), hold [[SHIFT]] and press [[#11]] (RESAMPLE), then tap [[#4]], with bank C still lit. The MPC records the sequence onto pad C4. Give it a moment.</li>
     <li>Press [[SAMPLE]] and tap [[#C4]]: your four fading hits are now one sound. Press [[B1]] until <span class="scr">Trim</span> appears, then hold [[SHIFT]] and press [[B2]] (Normalize) to bring it up to full level.</li>
     <li>For a ghostly finish, hold [[SHIFT]] and press [[LOOP]] (REVERSE): the echoes now swell <em>towards</em> the sound. Press [[B2]] until <span class="scr">Tune</span> appears and set Semi Tune to <strong>&#8722;12</strong>.</li>
   </ol>
 
   <h3><span class="part">E</span>Tidy up</h3>
   <ol class="steps" style="--start:17">
-    <li>Delete the helper sequence so it never turns up in your song: press [[SEQ]], make sure bank <strong>A</strong> is lit, hold [[ERASE]] and tap [[#15]]. Press [[B3]] to confirm.</li>
+    <li>Delete the helper sequence so it never turns up in your song: press [[SEQ]], make sure bank <strong>A</strong> is lit, hold [[ERASE]] and tap [[#15]] (or the helper pad you used). It held only the four taps you just recorded. If the screen asks you to confirm, press [[B3]]. The pad goes dim.</li>
     <li>Save as <span class="scr">GENTLY5</span>.</li>
   </ol>
 
-  <div class="play"><h2><span class="tag">Have a Play</span>More from less</h2>
+  <div class="play"><h2><span class="tag">Go Further</span>One sound, four characters</h2>
+    <p>About 15 to 20 minutes. Copy C1 to [[#C5]] to [[#C8]] and turn each copy into something unrecognisable. No recipes this time: just a word for each, and the tools you know.</p>
     <ul>
-      <li><strong>Zoom in.</strong> On the Trim page, hold [[SHIFT]] while turning [[@K1]] or [[@K2]] to see the start or end close up. Tiny pieces of a sound can be the most interesting.</li>
-      <li><strong>Print an effect.</strong> One review reports that resampling captures Knob FX, but Akai&#8217;s guide doesn&#8217;t say. To find out, put [[~Tape Delay]] on pad C1 in FX SELECT, record a helper sequence and resample it as above. Listen for the echoes, then set Knob FX back to [[~Reverb Large]] on pads A5 and A6 only, and delete the helper.</li>
-      <li><strong>Stretch.</strong> On the Tune page, [[@K3]] is <strong>Warp</strong>. Hold [[SHIFT]] + [[#15]] (WARP) to switch between <span class="scr">Time Stretch</span> (longer, same pitch) and <span class="scr">Pitch</span> (longer and lower, like a slowed record).</li>
+      <li><strong>C5, tiny:</strong> a sliver of the sound. Hold [[SHIFT]] while turning Start or End on the Trim page to zoom in.</li>
+      <li><strong>C6, enormous:</strong> pitch, attack and filter.</li>
+      <li><strong>C7, stretched:</strong> on the Tune page, set [[@K3]] (Warp) to 200%. Press [[SHIFT]] + [[#15]] (WARP) to switch between <span class="scr">Time Stretch</span> (twice as long, same pitch) and <span class="scr">Pitch</span> (twice as long and lower). In Pitch mode Semi Tune is unavailable.</li>
+      <li><strong>C8, your word:</strong> pick one (&#8220;underwater&#8221;, &#8220;ghost&#8221;, &#8220;machine&#8221;) and chase it.</li>
+      <li><strong>Keep the best.</strong> Save your favourite as its own sample: select its pad, press [[SHIFT]] + [[SAMPLE SELECT]] (SAVE SAMPLE), name it, and press [[B3]] (<span class="scr">Do It!</span>). It goes into a folder called <span class="scr">MPC-Sample/Samples</span>, ready for any future project.</li>
     </ul>
+    <p>Save as <span class="scr">GENTLY5B</span>.</p>
   </div>
 
   <div class="wrap"><div class="cols">
@@ -307,7 +353,7 @@
       <li><strong>Start/End</strong> choose which part of a sound plays.</li>
       <li><strong>Envelopes</strong> shape loudness; <strong>filters</strong> shape brightness.</li>
       <li><strong>Resampling</strong> prints a whole performance into one new sound.</li>
-      <li><strong>Normalize</strong> brings a quiet sound up to full level.</li>
+      <li>Start/End skip audio; <strong>Trim Sample</strong> removes it for good.</li>
     </ul></div>
     <div class="creation"><h2><span class="tag">Your Creation</span>GENTLY5</h2><p>From one source on C1: a <strong>pluck</strong> (C2), a reversed <strong>swell</strong> (C3) and a hand-played, printed <strong>echo</strong> (C4). Your own sound palette, saved as <span class="scr">GENTLY5</span>.</p></div>
   </div></div>

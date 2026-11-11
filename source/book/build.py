@@ -53,13 +53,17 @@ FIGS = {
     "versions_fig": svgs.versions_fig,
     "screen_buttons_fig": svgs.screen_buttons_fig,
     "cover_pads": cover_pads,
+    "cover_blueprint": svgs.cover_blueprint,
+    "five_words_fig": svgs.five_words_fig,
+    "record_flow_fig": svgs.record_flow_fig,
+    "storage_fig": svgs.storage_fig,
 }
 
 
 def fig_sub(m):
     name, _, cap = m.group(1).partition("|")
     svg = FIGS[name]()
-    if name == "cover_pads":
+    if name in ("cover_pads", "cover_blueprint"):
         return svg
     capt = f"<figcaption>{cap}</figcaption>" if cap else ""
     return f'<figure class="diagram">{svg}{capt}</figure>'

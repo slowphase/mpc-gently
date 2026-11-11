@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.0, November 2026
+
+- Second edition: 78 pages, same eight lessons, project names, 84 BPM and 80-second track. Checked against Akai's *MPC Sample User Guide* v1.3.0 (RevA).
+- New blueprint-style cover.
+- Shorter guided lessons (15 to 30 minutes), each with an optional Go Further challenge and a guided or creative route between lessons.
+- Lesson 7 rewritten so every section selects its sequence before editing; the arrangement (Intro, Main, Main, Break, Lift, Main, Outro) is consistent throughout.
+- New Lesson 4 check that the bass and atmosphere sounds suit each other; 16 Levels now shows only documented behaviour.
+- Lesson 8 now ends by exporting the track as audio.
+- New reference sections: Getting Back to a Known State, and Your Sounds and Storage. Troubleshooting expanded to 23 entries with a navigation table.
+- Technical corrections: Mute works in any mode; Knob FX control versus Bypass; supported import formats; export location marked as unconfirmed.
+- Still pending physical-hardware validation. Full manuscript history: [source/book/CHANGELOG.md](source/book/CHANGELOG.md).
+
 ## v0.9.0-preview, November 2026
 
 - Initial public preview of *MPC, Gently*.
