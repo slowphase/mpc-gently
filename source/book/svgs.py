@@ -363,40 +363,39 @@ def filter_fig():
 
 
 def levels_map():
-    """16 Levels Tune: pad 4 = original pitch (User Guide). Semitone offsets
-    shown as the conventional MPC layout; the book asks the reader to check."""
+    """16 Levels Tune: only what the User Guide documents. Pad 4 plays the
+    original pitch; lower pads are lower, higher pads are higher. No interval
+    values are printed, because the spacing is not yet confirmed."""
     b = []
     W = 600
-    off = {n: n - 4 for n in range(1, 17)}
-    names = {4: "HOME", 7: "dark", 9: "lift", 11: "strong", 16: "octave", 2: "step down"}
     cell = 92
-    x0 = 20
-    y0 = 10
+    x0, y0 = 20, 10
     for n in range(1, 17):
         col = (n - 1) % 4
         row = 3 - (n - 1) // 4
         x = x0 + col * (cell + 8)
         y = y0 + row * (cell + 8)
-        key = n in names
-        fill = ORANGE if n == 4 else (AMBER if key else LIGHT)
-        b.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="9" fill="{fill}" stroke="{INK}" stroke-width="{2 if key else 1}"/>')
-        b.append(t(x + 10, y + 22, f"PAD {n}", 11, INK if n != 4 else "#fff", weight=700, ls=1))
-        o = off[n]
-        s = "±0" if o == 0 else (f"+{o}" if o > 0 else f"−{-o}")
-        b.append(t(x + cell / 2, y + 60, s, 26, INK if n != 4 else "#fff", "middle", 700))
-        if key:
-            b.append(t(x + cell / 2, y + 82, names[n], 12, INK if n != 4 else "#fff", "middle", italic=True))
-    b.append(t(430, 40, "PAD 4 = original", 14, ORANGE, weight=700))
-    b.append(t(430, 58, "confirmed by Akai", 12, GREY, italic=True))
-    b.append(t(430, 96, "IF each pad is one", 13, INK, weight=700))
-    b.append(t(430, 114, "semitone, as on", 13, INK))
-    b.append(t(430, 132, "classic MPCs, the", 13, INK))
-    b.append(t(430, 150, "numbers show the", 13, INK))
-    b.append(t(430, 168, "distance from home.", 13, INK))
-    b.append(t(430, 206, "Not yet confirmed", 13, ORANGE, weight=700))
-    b.append(t(430, 224, "for MPC Sample:", 13, INK))
-    b.append(t(430, 242, "check by ear with", 13, INK))
-    b.append(t(430, 260, "the octave test.", 13, INK))
+        if n == 4:
+            fill, lab, tc = ORANGE, "original", "#fff"
+        elif n < 4:
+            fill, lab, tc = "#d6ccb9", "lower", INK
+        else:
+            fill, lab, tc = LIGHT, "higher", INK
+        b.append(f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="9" fill="{fill}" stroke="{INK}" stroke-width="{2 if n == 4 else 1}"/>')
+        b.append(t(x + 10, y + 22, f"PAD {n}", 11, tc, weight=700, ls=1))
+        arrow = "" if n == 4 else ("\u2193" if n < 4 else "\u2191")
+        b.append(t(x + cell / 2, y + 62, arrow or "\u25CF", 26 if arrow else 20, tc, "middle", 700))
+        b.append(t(x + cell / 2, y + 82, lab, 12, tc, "middle", italic=True))
+    b.append(t(430, 40, "Documented by Akai", 13, ORANGE, weight=700))
+    b.append(t(430, 62, "Pad 4 plays the", 13, INK))
+    b.append(t(430, 80, "original pitch.", 13, INK))
+    b.append(t(430, 106, "Pads below 4 play", 13, INK))
+    b.append(t(430, 124, "lower; pads above", 13, INK))
+    b.append(t(430, 142, "4 play higher.", 13, INK))
+    b.append(t(430, 184, "Not yet confirmed", 13, ORANGE, weight=700))
+    b.append(t(430, 206, "How far apart the", 13, INK))
+    b.append(t(430, 224, "pads are. Explore", 13, INK))
+    b.append(t(430, 242, "them by ear.", 13, INK))
     return _svg(W, 410, "".join(b))
 
 
@@ -420,7 +419,7 @@ def bass_pattern():
     for s, n in notes.items():
         b.append(f'<rect x="{gx0+s*cw+3}" y="{y+3}" width="{cw*2.6}" height="34" rx="5" fill="{ORANGE}"/>')
         b.append(t(gx0 + s * cw + 10, y + 26, f"PAD {n}", 12, "#fff", weight=700))
-    b.append(t(gx0, y + 66, "B1 home (0), B1 home, B2 dark (+3), B3 step down (−2), then round again", 12, GREY, italic=True))
+    b.append(t(gx0, y + 66, "B1 home, B1 home, B2 dark (3 above), B3 step down (2 below), then round again", 12, GREY, italic=True))
     return _svg(W, y + 74, "".join(b))
 
 
@@ -492,7 +491,7 @@ def chop_fig():
         b.append(f'<line x1="{x}" y1="8" x2="{x}" y2="135" stroke="{ORANGE}" stroke-width="2.5"/>')
         b.append(f'<rect x="{x}" y="140" width="56" height="26" rx="5" fill="{ORANGE}"/>')
         b.append(t(x + 28, 158, f"PAD {k+1}", 11, "#fff", "middle", 700))
-    b.append(t(300, 192, "Threshold chopping puts a slice wherever a new sound starts", 12, GREY, "middle", italic=True))
+    b.append(t(300, 192, "Threshold chopping places slices where it hears new sounds start", 12, GREY, "middle", italic=True))
     return _svg(W, 200, "".join(b))
 
 
@@ -589,3 +588,287 @@ def bass_grid():
     return drum_grid([
         ("Bass", {0, 8}, ORANGE),
     ], steps=16)
+
+
+# ---------------------------------------------------------------------------
+# v3 diagrams
+# ---------------------------------------------------------------------------
+
+def five_words_fig():
+    b = []
+    W = 600
+    # project outer box
+    b.append(f'<rect x="6" y="6" width="588" height="196" rx="10" fill="none" stroke="{INK}" stroke-width="2"/>')
+    b.append(t(20, 28, "PROJECT", 12, ORANGE, weight=700, ls=2))
+    b.append(t(120, 28, "everything, saved under one name", 12, GREY, italic=True))
+    # banks
+    b.append(f'<rect x="20" y="42" width="330" height="148" rx="8" fill="{LIGHT}"/>')
+    b.append(t(32, 62, "BANKS A–H", 11, INK, weight=700, ls=1.5))
+    b.append(t(140, 62, "8 sets of 16 pads", 11, GREY, italic=True))
+    letters = "ABCDEFGH"
+    for k in range(3):
+        x0 = 34 + k * 104
+        b.append(f'<rect x="{x0}" y="74" width="94" height="104" rx="6" fill="{CREAM}" stroke="{INK}" stroke-width="1.2"/>')
+        b.append(t(x0 + 8, 90, f"BANK {letters[k]}", 10, INK, weight=700))
+        for n in range(16):
+            c, r = n % 4, 3 - n // 4
+            px, py = x0 + 9 + c * 20, 98 + r * 19
+            hit = (k == 0 and n in (0, 1, 2, 4, 5))
+            b.append(f'<rect x="{px}" y="{py}" width="16" height="15" rx="2" fill="{ORANGE if hit else "#b9b2a6"}"/>')
+    b.append(t(345, 120, "…", 18, GREY, "end"))
+    # sample callout
+    b.append(f'<line x1="57" y1="153" x2="57" y2="196" stroke="{ORANGE}" stroke-width="1.5"/>')
+    # sequences
+    b.append(f'<rect x="364" y="42" width="216" height="148" rx="8" fill="{LIGHT}"/>')
+    b.append(t(376, 62, "SEQUENCES", 11, INK, weight=700, ls=1.5))
+    b.append(t(474, 62, "when pads play", 11, GREY, italic=True))
+    for r in range(3):
+        y = 76 + r * 36
+        b.append(f'<rect x="376" y="{y}" width="192" height="28" rx="5" fill="{CREAM}" stroke="{INK}" stroke-width="1.2"/>')
+        b.append(t(384, y + 18, f"SEQ {r+1}", 10, ORANGE, weight=700))
+        for s in range(8):
+            if (r == 0 and s in (0, 2, 4, 6)) or (r == 1 and s in (1, 3, 5, 7)) or (r == 2 and s in (0, 4)):
+                b.append(f'<rect x="{430 + s*16}" y="{y+8}" width="10" height="12" rx="2" fill="{INK}"/>')
+    b.append(t(300, 222, "a SAMPLE is one sound on one PAD", 12, INK, "middle", 700))
+    return _svg(W, 230, "".join(b))
+
+
+def record_flow_fig():
+    steps = [("1", "SEQ", "Sequence Mode"), ("2", "PAD", "choose the sequence"), ("3", "BPM · LENGTH · Q", "set it up"),
+             ("4", "SEQ REC", "arm (it flashes)"), ("5", "PLAY", "play sample pads"), ("6", "AGAIN", "overdub layers"),
+             ("7", "SEQ REC", "disarm and listen"), ("8", "SAVE", "save the project")]
+    b = []
+    W = 600
+    bw, bh, gx = 134, 66, 14
+    for i, (n, key, sub) in enumerate(steps):
+        row, col = i // 4, i % 4
+        x = 8 + col * (bw + gx)
+        y = 10 + row * (bh + 34)
+        fill = ORANGE if i in (3, 4, 5) else (LIGHT if i < 3 else "#d6ccb9")
+        tc = "#fff" if i in (3, 4, 5) else INK
+        b.append(f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" rx="8" fill="{fill}"/>')
+        b.append(f'<circle cx="{x+18}" cy="{y+18}" r="11" fill="{INK}"/>')
+        b.append(t(x + 18, y + 22.5, n, 12, CREAM, "middle", 700))
+        b.append(t(x + 36, y + 23, key, 12 if len(key) < 12 else 10, tc, weight=700))
+        b.append(t(x + 12, y + 50, sub, 11.5, tc, italic=True))
+        if col < 3:
+            ax = x + bw + 2
+            b.append(f'<polygon points="{ax},{y+bh/2-5} {ax+9},{y+bh/2} {ax},{y+bh/2+5}" fill="{INK}"/>')
+    # wrap arrow row1 -> row2
+    b.append(f'<path d="M{8+3*(bw+gx)+bw/2},{10+bh+2} C{8+3*(bw+gx)+bw/2},{10+bh+22} {8+bw/2},{10+bh+12} {8+bw/2},{10+bh+30}" fill="none" stroke="{INK}" stroke-width="1.5"/>')
+    b.append(f'<polygon points="{8+bw/2-5},{10+bh+27} {8+bw/2},{10+bh+34} {8+bw/2+5},{10+bh+27}" fill="{INK}"/>')
+    # overdub loop over step 6
+    x6 = 8 + 1 * (bw + gx); y2 = 10 + bh + 34
+    b.append(f'<path d="M{x6+bw-20},{y2+bh+2} C{x6+bw-20},{y2+bh+20} {x6-bw+40},{y2+bh+20} {x6-bw+40},{y2+bh+2}" fill="none" stroke="{ORANGE}" stroke-width="2" stroke-dasharray="5 4"/>')
+    b.append(t(x6 - 8, y2 + bh + 30, "repeat steps 5 and 6 for each layer", 11, ORANGE, "middle", italic=True))
+    b.append(t(8, y2 + bh + 52, "Steps 1–3: pads choose sequences.   Steps 4–6: recording is armed and pads play sounds.", 11, GREY, italic=True))
+    return _svg(W, y2 + bh + 60, "".join(b))
+
+
+def storage_fig():
+    b = []
+    W = 600
+    def box(x, y, w, h, title, sub, items, fill):
+        o = [f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="{fill}" stroke="{INK}" stroke-width="1.5"/>',
+             t(x + 14, y + 24, title, 13, INK, weight=700, ls=1.5), t(x + 14, y + 42, sub, 11, GREY, italic=True)]
+        for k, it in enumerate(items):
+            o.append(f'<rect x="{x+14}" y="{y+56+k*28}" width="{w-28}" height="22" rx="4" fill="{CREAM}"/>')
+            o.append(t(x + 24, y + 71 + k * 28, it, 11.5, INK))
+        return "".join(o)
+    b.append(box(8, 8, 270, 228, "INTERNAL DRIVE", "8 GB, about 2 GB of factory content",
+                 ["Factory samples, demos, kits", "Your saved projects (User)", "Your saved samples", "Background save of current project", "Exported audio? (not documented)"], LIGHT))
+    b.append(box(322, 8, 270, 172, "microSD CARD", "optional, bought separately",
+                 ["Sample packs", "Backups and extra projects", "Files to and from a computer"], "#efe3cf"))
+    # computer
+    b.append(f'<rect x="392" y="208" width="130" height="62" rx="6" fill="{INK}"/>')
+    b.append(f'<rect x="402" y="216" width="110" height="40" rx="3" fill="#4a4743"/>')
+    b.append(t(457, 241, "COMPUTER", 11, CREAM, "middle", 700, 1.5))
+    b.append(f'<line x1="457" y1="181" x2="457" y2="206" stroke="{ORANGE}" stroke-width="3"/>')
+    b.append(f'<polygon points="451,188 457,180 463,188" fill="{ORANGE}"/><polygon points="451,199 457,207 463,199" fill="{ORANGE}"/>')
+    b.append(t(470, 197, "SD Card Access", 11, ORANGE, weight=700))
+    b.append(f'<line x1="282" y1="238" x2="388" y2="238" stroke="{GREY}" stroke-width="1.5" stroke-dasharray="4 4"/>')
+    b.append(t(12, 258, "Akai describes no computer route to this drive", 11, GREY, italic=True))
+    return _svg(W, 276, "".join(b))
+
+
+# ---------------------------------------------------------------------------
+# Cover: line-art "technical drawing" of the top panel, in the style of the
+# GitHub hero. Uses the same verified coordinates as panel(). Labels are only
+# those printed on the panel and used elsewhere in this book.
+# ---------------------------------------------------------------------------
+COVER_LABELS = {  # secondary (SHIFT) labels used in the book
+    "SAMPLE": "INPUT CONFIG", "SEQ": "STEP EDIT", "KNOBFX": "FX SELECT",
+    "CHOP": "NOTE ON", "MUTE": "UNMUTE ALL", "LOOP": "REVERSE", "16LEVELS": "TYPE",
+    "SAMPLESELECT": "SAVE SAMPLE", "ERASE": "COPY", "MINUS": "UNDO",
+    "SEQRECORD": "RECALL",
+}
+COVER_PADS = {1: "FULL LEVEL", 3: "DOUBLE SEQ", 4: "COUNT-IN", 5: "COMPRESSOR",
+              9: "FADER", 11: "RESAMPLE", 12: "SONG", 13: "TRIM SAMPLE",
+              14: "TIME CORRECT", 15: "WARP", 16: "PROJECT"}
+COVER_NAMES = {"16LEVELS": "16 LEVELS", "SAMPLESELECT": "SAMPLE SELECT",
+               "NOTEREPEAT": "NOTE REPEAT", "SAMPLERECORD": "SAMPLE RECORD",
+               "SEQRECORD": "SEQ RECORD", "PADFX": "PAD FX", "KNOBFX": "KNOB FX",
+               "PADBANK": "PAD BANK", "TAPTEMPO": "TAP TEMPO", "MINUS": "−", "PLUS": "+"}
+
+
+def cover_blueprint():
+    import math
+    LN = "#E8D9BC"          # line colour (cream on the dark cover)
+    DIM = "#8f8679"
+    MONO = "'IBM Plex Mono', monospace"
+    X0, Y0, SC = 64, -3, 0.15  # mm placement of the panel on the cover
+    W, H = 905 - OX, 955 - OY
+    o = ['<svg class="blueprint" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 244" '
+         'style="position:absolute;left:0;top:0;width:160mm;height:244mm">',
+         '<defs><pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">'
+         f'<line x1="0" y1="0" x2="0" y2="9" stroke="{LN}" stroke-opacity=".22" stroke-width="1.4"/></pattern>'
+         '<clipPath id="page"><rect x="0" y="0" width="160" height="244"/></clipPath></defs>',
+         '<g clip-path="url(#page)">']
+    # faint drafting grid behind the drawing
+    for gx in range(0, 161, 8):
+        o.append(f'<line x1="{gx}" y1="0" x2="{gx}" y2="112" stroke="{LN}" stroke-opacity=".035" stroke-width=".2"/>')
+    for gy in range(0, 113, 8):
+        o.append(f'<line x1="0" y1="{gy}" x2="160" y2="{gy}" stroke="{LN}" stroke-opacity=".035" stroke-width=".2"/>')
+
+    def P(ux, uy):  # panel units -> mm
+        return X0 + ux * SC, Y0 + uy * SC
+
+    g = [f'<g transform="translate({X0},{Y0}) scale({SC})" fill="none" stroke="{LN}" stroke-width="2.6" '
+         f'font-family="{MONO}" stroke-linejoin="round">']
+    txt = lambda x, y, s, fs=12, col=LN, anc="middle", w=500, ls=1.5: (
+        f'<text x="{x}" y="{y}" text-anchor="{anc}" font-size="{fs}" font-weight="{w}" letter-spacing="{ls}" '
+        f'fill="{col}" stroke="none">{s}</text>')
+    # body + top band (hatched)
+    g.append(f'<rect x="0" y="0" width="{W}" height="{H}" rx="34" fill="#2f2e2b" stroke-width="3.4"/>')
+    g.append(f'<rect x="12" y="12" width="{W-24}" height="{335-OY-12}" rx="18" fill="url(#hatch)"/>')
+    # display
+    dx, dy, dw, dh = R(457, 180, 640, 318)
+    g.append(f'<rect x="{dx}" y="{dy}" width="{dw}" height="{dh}" rx="5" fill="#2B2A28"/>')
+    for i, s in enumerate(("Trim", "Tune", "Filter")):
+        g.append(txt(dx + 30 + i * 62, dy + 20, s, 11, LN, w=400, ls=.5))
+    g.append(f'<line x1="{dx+10}" y1="{dy+28}" x2="{dx+52}" y2="{dy+28}" stroke="{ORANGE}" stroke-width="2.4"/>')
+    g.append(f'<line x1="{dx+8}" y1="{dy+40}" x2="{dx+dw-8}" y2="{dy+40}" stroke-dasharray="3 3" stroke-width="1"/>')
+    for row, yc in enumerate((dy + 64, dy + 94)):
+        pts = []
+        for k in range(0, 160):
+            x = dx + 12 + k * (dw - 24) / 159
+            a = 11 * (0.55 + 0.45 * abs(math.sin(k * 0.37 + row))) * (1 if k % 2 else -1) * (0.6 + 0.4 * math.sin(k * 1.7) ** 2)
+            pts.append(f"{x:.1f},{yc + a:.1f}")
+        g.append(f'<polyline points="{" ".join(pts)}" stroke="{ORANGE}" stroke-width="1.6"/>')
+    g.append(f'<line x1="{dx}" y1="{dy+dh-22}" x2="{dx+dw}" y2="{dy+dh-22}" stroke-width="1.4"/>')
+    for i, s in enumerate(("Start", "End", "Loop")):
+        g.append(txt(dx + 24 + i * 62, dy + dh - 7, s, 11, LN, w=400, ls=.5))
+    # meters
+    for mx in (672, 690):
+        for k in range(5):
+            f = ORANGE if k < 2 else "none"
+            g.append(f'<rect x="{mx-OX}" y="{185-OY+k*27}" width="13" height="20" rx="2" fill="{f}" stroke="{ORANGE if k < 2 else LN}" stroke-width="1.8"/>')
+    # speaker
+    sx, sy, sw, sh = R(735, 182, 862, 305)
+    g.append(f'<rect x="{sx}" y="{sy}" width="{sw}" height="{sh}" rx="12" fill="#2B2A28"/>')
+    for gy in range(int(sy) + 12, int(sy + sh) - 6, 12):
+        for gx in range(int(sx) + 12, int(sx + sw) - 6, 12):
+            g.append(f'<circle cx="{gx}" cy="{gy}" r="2" fill="{LN}" stroke="none"/>')
+    # bank indicator and logo text in the band
+    g.append(f'<rect x="{352-OX}" y="{212-OY}" width="30" height="34" rx="4" fill="#2B2A28" stroke-width="2"/>')
+    g.append(txt(367 - OX, 236 - OY, "A", 18, LN, w=500, ls=0))
+    # knobs
+    def knob(cx, cy, r, ticks=True):
+        if ticks:
+            for k in range(11):
+                a = math.radians(-225 + k * 27)
+                g.append(f'<line x1="{cx + (r+14)*math.cos(a):.1f}" y1="{cy + (r+14)*math.sin(a):.1f}" '
+                         f'x2="{cx + (r+22)*math.cos(a):.1f}" y2="{cy + (r+22)*math.sin(a):.1f}" stroke-width="1.8"/>')
+        g.append(f'<circle cx="{cx}" cy="{cy}" r="{r+7}" fill="#2B2A28" stroke-width="2"/>')
+        g.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke-width="2.6"/>')
+        g.append(f'<line x1="{cx}" y1="{cy-r+3}" x2="{cx}" y2="{cy-4}" stroke-width="3" stroke-linecap="round"/>')
+    for key, ((cx, cy), r, lab) in KNOBS.items():
+        if key == "ENCODER":
+            for k in range(36):
+                a = math.radians(k * 10)
+                g.append(f'<line x1="{cx + r*math.cos(a):.1f}" y1="{cy + r*math.sin(a):.1f}" '
+                         f'x2="{cx + (r+8)*math.cos(a):.1f}" y2="{cy + (r+8)*math.sin(a):.1f}" stroke-width="1.6"/>')
+            g.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#2B2A28"/>')
+            g.append(f'<circle cx="{cx}" cy="{cy}" r="{r-10}" stroke-width="1.6"/>')
+            continue
+        knob(cx, cy, r)
+        if key == "MAINVOL":
+            g.append(txt(cx, cy + r + 40, "MAIN VOLUME", 12))
+        else:
+            g.append(txt(cx + r + 14, cy + r + 6, lab, 13, anc="start", ls=1))
+    # mode / pad-play captions
+    for cx, s in ((284 - OX, "MODE"), (810 - OX, "PAD PLAY")):
+        g.append(txt(cx, 356 - OY, s, 12, DIM, ls=2))
+        g.append(f'<line x1="{cx-80}" y1="{352-OY}" x2="{cx-40}" y2="{352-OY}" stroke="{DIM}" stroke-width="1.4"/>')
+        g.append(f'<line x1="{cx+40}" y1="{352-OY}" x2="{cx+80}" y2="{352-OY}" stroke="{DIM}" stroke-width="1.4"/>')
+    # buttons
+    for key, ((x, y, w, h), lab) in BUTTONS.items():
+        if key in ("B1", "B2", "B3"):
+            g.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="4" fill="#2B2A28" stroke-width="2.2"/>')
+            continue
+        hot = key in ("PADFX", "KNOBFX")
+        g.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" fill="{ORANGE if hot else "#2f2e2b"}" '
+                 f'stroke="{ORANGE if hot else LN}" stroke-width="2.4"/>')
+        name = COVER_NAMES.get(key, lab if key not in ("STOP", "PLAY") else "")
+        if key == "STOP":
+            g.append(f'<rect x="{x+w/2-6}" y="{y+h/2-6}" width="12" height="12" fill="{LN}" stroke="none"/>')
+        elif key == "PLAY":
+            g.append(f'<path d="M{x+w/2-6},{y+h/2-8} l14,8 l-14,8z" fill="{LN}" stroke="none"/>')
+        else:
+            words = name.split(" ")
+            fs = 22 if name in ("−", "+") else 9.5
+            col = "#FBF7EE" if hot else LN
+            if len(words) == 2 and len(name) > 7:
+                g.append(txt(x + w / 2, y + h / 2 - 1.5, words[0], fs, col, ls=.6))
+                g.append(txt(x + w / 2, y + h / 2 + 9.5, words[1], fs, col, ls=.6))
+            else:
+                g.append(txt(x + w / 2, y + h / 2 + fs * .36, name, fs, col, ls=.6))
+        if key in COVER_LABELS:
+            g.append(txt(x + w / 2, y + h + 10.5, COVER_LABELS[key], 8, DIM, ls=.5))
+    # fader
+    fx, fy, fw, fh = R(262, 545, 326, 735)
+    g.append(f'<rect x="{fx+fw/2-6}" y="{fy}" width="12" height="{fh}" rx="5" stroke-width="2"/>')
+    g.append(f'<rect x="{fx+6}" y="{fy+70}" width="{fw-12}" height="40" rx="5" fill="#2f2e2b" stroke-width="2.6"/>')
+    for k in (1, 2, 3):
+        g.append(f'<line x1="{fx+14}" y1="{fy+70+k*10}" x2="{fx+fw-14}" y2="{fy+70+k*10}" stroke-width="1.4"/>')
+    # pad well and pads
+    g.append(f'<rect x="{366-OX}" y="{453-OY}" width="{737-366}" height="{825-453}" rx="6" fill="{LN}" fill-opacity=".09" stroke-width="5"/>')
+    for n in range(1, 17):
+        x, y, w, h = pad_rect(n)
+        g.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="5" fill="#2f2e2b" stroke-width="2.2"/>')
+        g.append(txt(x + 2, y + h + 10, str(n), 8, LN, anc="start", ls=.3))
+        if n in COVER_PADS:
+            g.append(txt(x + w - 1, y + h + 10, COVER_PADS[n], 6.2, DIM, anc="end", ls=.3))
+    # mic glyph
+    for ddx, ddy in ((-5, -9), (5, -9), (-5, 0), (5, 0)):
+        g.append(f'<circle cx="{869-OX+ddx}" cy="{548-OY+ddy}" r="3" fill="{LN}" stroke="none"/>')
+    # palm rest
+    px, py, pw, ph = R(200, 838, 893, 945)
+    g.append(f'<rect x="{px}" y="{py}" width="{pw}" height="{ph}" rx="16" fill="url(#hatch)" stroke-width="2"/>')
+    g.append('</g>')
+    o += g
+    # drafting centre lines (dash-dot), through K2 and between pad rows 2 and 3
+    k2x, _ = P(547 - OX, 0)
+    o.append(f'<line x1="{k2x}" y1="0" x2="{k2x}" y2="112" stroke="{ORANGE}" stroke-opacity=".7" stroke-width=".28" stroke-dasharray="4 1.2 .6 1.2"/>')
+    _, hy = P(0, 732 - OY + 38)
+    o.append(f'<line x1="40" y1="{hy}" x2="160" y2="{hy}" stroke="{ORANGE}" stroke-opacity=".7" stroke-width=".28" stroke-dasharray="4 1.2 .6 1.2"/>')
+    # leader lines with dots, like the hero
+    leaders = [
+        ((457 - OX, 192 - OY), None),            # screen
+        ((412 - OX - 20, 410 - OY - 18), 31.5),    # K1 (with a bend)
+        ((220 - OX, 426 - OY), None),            # PAD FX
+        ((375 - OX, 553 - OY), None),            # pad 13
+        ((262 - OX + 6, 545 - OY + 90), None),   # fader cap
+    ]
+    for (ux, uy), bend in leaders:
+        tx, ty = P(ux, uy)
+        ly = bend if bend else ty
+        lx = 40
+        o.append(f'<circle cx="{lx}" cy="{ly:.2f}" r=".9" fill="{ORANGE}"/>')
+        if bend:
+            o.append(f'<polyline points="{lx},{ly:.2f} {tx-6:.2f},{ly:.2f} {tx:.2f},{ty:.2f}" fill="none" stroke="{ORANGE}" stroke-width=".32"/>')
+        else:
+            o.append(f'<line x1="{lx}" y1="{ly:.2f}" x2="{tx:.2f}" y2="{ty:.2f}" stroke="{ORANGE}" stroke-width=".32"/>')
+        o.append(f'<circle cx="{tx:.2f}" cy="{ty:.2f}" r=".55" fill="{ORANGE}"/>')
+    o.append('</g></svg>')
+    return "".join(o)

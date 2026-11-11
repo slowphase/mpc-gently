@@ -14,14 +14,14 @@
     <tr><td>Load a sound onto the selected pad</td><td>[[SAMPLE SELECT]], ENCODER to browse, press to load</td></tr>
     <tr><td>Pages of settings (press until the page appears)</td><td>[[B1]] Trim, Mix, Amp Env &#183; [[B2]] Tune, Play &#183; [[B3]] Filter, Filt Env</td></tr>
     <tr><td>Copy a pad</td><td>[[SHIFT]] + [[ERASE]] (COPY), tap destination pads, release</td></tr>
-    <tr><td>Erase a sound from a pad</td><td>Stopped: hold [[ERASE]], press the pad</td></tr>
+    <tr><td>Erase the sound itself from a pad</td><td>Sample Mode, stopped, [[SEQ RECORD]] dark: hold [[ERASE]], press the pad</td></tr>
     <tr><td>Loop / Reverse</td><td>[[LOOP]] / [[SHIFT]] + [[LOOP]]</td></tr>
     <tr><td>Play only while held</td><td>[[SHIFT]] + [[CHOP]] (NOTE ON)</td></tr>
     <tr><td>Pitches across the pads</td><td>[[SHIFT]] + [[16 LEVELS]] for Tune, then [[16 LEVELS]]</td></tr>
     <tr><td>Normalize</td><td>Trim page: [[SHIFT]] + [[B2]]</td></tr>
+    <tr><td>Stretch: length only, or length and pitch</td><td>Tune page [[@K3]] Warp; [[SHIFT]] + [[#15]] switches Time Stretch / Pitch</td></tr>
     <tr><td>Cut away outside Start/End</td><td>[[SHIFT]] + [[#13]] (TRIM SAMPLE)</td></tr>
     <tr><td>Save a single sound</td><td>[[SHIFT]] + [[SAMPLE SELECT]] (SAVE SAMPLE)</td></tr>
-    <tr><td>Fader job</td><td>[[SHIFT]] + [[#9]] (FADER): choose what the fader controls</td></tr>
   </table>
   <table class="ref">
     <tr><th>Sequences</th><th></th></tr>
@@ -30,14 +30,15 @@
     <tr><td>Record Quantisation</td><td>[[B3]] in Sequence Mode, or [[SHIFT]] + [[#10]]</td></tr>
     <tr><td>Record</td><td>[[SEQ RECORD]], then [[PLAY]]. [[SEQ RECORD]] again to stop recording</td></tr>
     <tr><td>Metronome / Count-in</td><td>[[SHIFT]] + [[TAP TEMPO]] / [[SHIFT]] + [[#4]]</td></tr>
-    <tr><td>Remove one pad&#8217;s hits</td><td>[[SEQ RECORD]] armed: hold [[ERASE]], press the pad</td></tr>
-    <tr><td>Erase a whole sequence</td><td>Sequence Mode: hold [[ERASE]], press its pad, [[B3]]</td></tr>
+    <tr><td>Remove one pad&#8217;s hits (sound stays)</td><td>Select the sequence, arm [[SEQ RECORD]]: hold [[ERASE]], press the pad</td></tr>
+    <tr><td>Record / erase a knob move</td><td>Armed, [[PLAY]], turn the knob / hold [[ERASE]], turn it, [[B3]]</td></tr>
+    <tr><td>Erase a whole sequence</td><td>Sequence Mode: hold [[ERASE]], press its pad ([[B3]] if asked to confirm)</td></tr>
     <tr><td>Copy a sequence</td><td>Sequence Mode: [[SHIFT]] + [[ERASE]] (COPY), tap destinations</td></tr>
     <tr><td>Half / double length</td><td>[[SHIFT]] + [[#2]] / [[SHIFT]] + [[#3]]</td></tr>
     <tr><td>Half / double speed</td><td>[[SHIFT]] + [[#6]] / [[SHIFT]] + [[#7]]</td></tr>
     <tr><td>Tidy timing after recording</td><td>[[SHIFT]] + [[#14]] (TIME CORRECT), [[B3]] Do It!</td></tr>
     <tr><td>Grab what you just played</td><td>[[SHIFT]] + [[SEQ RECORD]] (RECALL)</td></tr>
-    <tr><td>Edit single hits</td><td>[[SHIFT]] + [[SEQ]] (STEP EDIT)</td></tr>
+    <tr><td>Delete one hit</td><td>[[SHIFT]] + [[SEQ]] (STEP EDIT): ENCODER to the step, tap the pad, [[B3]]</td></tr>
   </table>
   <table class="ref">
     <tr><th>Recording sound</th><th></th></tr>
@@ -51,35 +52,220 @@
     <tr><th>Effects, song and project</th><th></th></tr>
     <tr><td>Choose a Knob FX and its pads</td><td>[[SHIFT]] + [[KNOB FX]] (FX SELECT): ENCODER to choose, tap pads (bright = affected)</td></tr>
     <tr><td>Knob FX knobs on / off</td><td>[[KNOB FX]]: lit = K1 to K3 adjust the effect; dark = sample settings</td></tr>
+    <tr><td>Bypass the Knob FX</td><td>FX SELECT, then [[B3]]</td></tr>
+    <tr><td>Mute pads / unmute all</td><td>[[MUTE]] (works in any mode), tap pads / [[SHIFT]] + [[MUTE]]</td></tr>
     <tr><td>Performance effects</td><td>[[PAD FX]]; [[SHIFT]] + [[PAD FX]] for FLEX BEAT</td></tr>
     <tr><td>Compressor</td><td>[[SHIFT]] + [[#5]]</td></tr>
     <tr><td>Song Mode</td><td>[[SHIFT]] + [[#12]]: [[B3]] insert, [[B2]] delete, [[B1]] export</td></tr>
     <tr><td>Save, load, new project</td><td>[[SHIFT]] + [[#16]] (PROJECT)</td></tr>
+    <tr><td>Reach the microSD card from a computer</td><td>[[SHIFT]] + [[#16]], [[~SD Card Access]]; eject on the computer, then [[B1]]</td></tr>
   </table>
+</section>
+
+<section class="chapter front" id="known">
+  <h1 data-short="Getting Back to a Known State">Getting Back to a Known State</h1>
+  <p>When the MPC is doing something you don&#8217;t understand, don&#8217;t hunt for the cause. Work down this list. Steps 1 to 8 stop, disarm, leave temporary modes and clear mutes: none of them changes a sound or a sequence. <strong>Step 9 is different</strong>, so stop before it if you can.</p>
+  <ol class="steps check">
+    <li><strong>Stop.</strong> Press [[STOP]]. Press it twice quickly to silence every sound that&#8217;s still ringing.</li>
+    <li><strong>Disarm recording.</strong> [[SEQ RECORD]] should be dark, not flashing. If it&#8217;s flashing, press [[STOP]]; if it still flashes, press [[SEQ RECORD]] once.</li>
+    <li><strong>Return to Sample Mode.</strong> Press [[SAMPLE]] so it&#8217;s lit. If a menu stays on the screen, look for <span class="scr">Cancel</span> or <span class="scr">Back</span> above [[B1]].</li>
+    <li><strong>Leave Chop Mode.</strong> If [[CHOP]] is lit, press it.</li>
+    <li><strong>Check the bank.</strong> Look at the letter beside MAIN VOLUME. Drums are in A, bass in B, your shaped sounds in C, recordings in D. Press [[PAD BANK]] to change.</li>
+    <li><strong>Clear mutes.</strong> If [[MUTE]] is lit, press it. Then [[SHIFT]] + [[MUTE]] (UNMUTE ALL). Muting never deletes anything.</li>
+    <li><strong>Disengage the special buttons.</strong> [[KNOB FX]], [[NOTE REPEAT]] and [[16 LEVELS]] should be dark. Press any that are lit.</li>
+    <li><strong>Choose your loop.</strong> Press [[SEQ]], check bank A is lit, tap [[#1]] and press [[PLAY]]. If it sounds right, you&#8217;re back.</li>
+    <li class="warn"><strong>Still wrong? Go back to a saved copy. This one can lose work.</strong> Loading replaces the working project, and everything since that copy was saved is gone. If what&#8217;s there might be worth keeping, save it first under a new name. Then [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]], and choose your most recent copy.</li>
+  </ol>
+  <div class="oops"><b class="h">This is not a factory reset</b>A <strong>factory reset</strong> is far more drastic. It lives in the MIDI Config menu ([[SHIFT]] + [[#8]]), which offers two options:
+    <ul class="plain">
+      <li><span class="scr">Reset Factory Settings</span> resets every <em>setting</em> and restarts the MPC.</li>
+      <li><span class="scr">Reset Factory Data</span> <strong>deletes all your projects and samples</strong> on the internal drive, and can&#8217;t be undone.</li>
+    </ul>
+    This book never needs either. If you&#8217;re ever told to try one, back up to a microSD card first.</div>
+</section>
+
+<section class="chapter front" id="storage">
+  <h1 data-short="Your Sounds and Storage">Your Sounds and Storage</h1>
+  <p>Everything in this book lives on the MPC&#8217;s <strong>internal drive</strong>: 8&#160;GB, about 2&#160;GB of which holds the factory sounds and demos. A <strong>microSD card</strong> is optional extra storage, and it matters for one reason: it&#8217;s the only storage Akai describes a computer reaching.</p>
+  <!--FIG:storage_fig|Where things live. Akai describes computer access only for the microSD card, through SD Card Access.-->
+  <dl class="controls">
+    <div><dt><strong>Factory samples</strong></dt><dd>The built-in sounds, in folders such as <span class="scr">Snares</span>. Browse them with [[SAMPLE SELECT]]. Loading one puts it on the selected pad in your project.</dd></div>
+    <div><dt><strong>User samples</strong></dt><dd>Sounds you&#8217;ve saved with SAVE SAMPLE ([[SHIFT]] + [[SAMPLE SELECT]]). They go into a folder called <span class="scr">MPC-Sample/Samples</span>, on whichever drive you choose with [[B2]], ready to load into any project.</dd></div>
+    <div><dt><strong>Sample packs</strong></dt><dd>Sounds downloaded on a computer. They must go on a microSD card (see below), then appear in the browser when you press [[B2]] to switch to the external drive.</dd></div>
+    <div><dt><strong>Projects</strong></dt><dd>Your sounds, sequences and song, saved together with SAVE PROJECT. Saving copies the project&#8217;s files to a new location, so a saved project carries its own sounds with it. Projects on the internal drive appear under [[~Load Project]], [[~User]].</dd></div>
+    <div><dt><strong>Kits</strong></dt><dd>Ready-made drum kits, under [[~Load Project]], [[~Kits]]. The ENCODER loads a kit <em>with four default sequences</em>; [[B3]] (Load Kit) loads only its samples. Akai doesn&#8217;t say what happens to your current sequences, so save first.</dd></div>
+    <div><dt><strong>Background saving</strong></dt><dd>Akai says progress is saved in the background, so switching off and on brings back the working project. It isn&#8217;t a named copy: a new or loaded project replaces it.</dd></div>
+    <div><dt><strong>Exported audio</strong></dt><dd>A song exported as an audio mixdown (Lesson 8): a finished file for listening and sharing. Akai&#8217;s guide doesn&#8217;t say which drive it&#8217;s saved to.</dd></div>
+  </dl>
+  <h2 class="sec"><span class="tag">Which to use</span>Internal or microSD?</h2>
+  <p><strong>Use the internal drive</strong> for your projects and everyday work: Akai says Load Project&#8217;s User folder holds projects saved there. <strong>Use a microSD card</strong> for sample packs, for backups, and for anything you want to copy to or from a computer.</p>
+  <h2 class="sec"><span class="tag">Optional, needs a computer</span>Copying files with SD Card Access</h2>
+  <ol class="steps">
+    <li>Push a microSD card fully into the slot on the left side and connect the MPC to the computer with the USB-C cable.</li>
+    <li>[[SHIFT]] + [[#16]] (PROJECT). Choose [[~SD Card Access]] and press the ENCODER. After a few seconds the card appears on the computer as a drive. The MPC can&#8217;t do anything else while it&#8217;s in this mode.</li>
+    <li>Copy files across. Leave the <span class="scr">MPC Sample</span> folder the MPC created alone, and put sample packs in a folder of your own.</li>
+    <li>Eject the drive on the computer <strong>first</strong>, then press [[B1]] on the MPC to leave SD Card Access.</li>
+  </ol>
+  <p class="smallprint"><strong>File types.</strong> Akai lists eight formats the MPC Sample can import, including WAV, AIFF, MP3 and FLAC, at 44.1, 48 or 96&#160;kHz and 16 or 24 bit. For ordinary sample packs, WAV is the simplest choice: if a pack comes in several editions, pick WAV. One sample-pack publisher (not Akai) reports that packs need firmware 1.2.1 or later.</p>
 </section>
 
 <section class="chapter front" id="trouble">
   <h1 data-short="When Things Go Wrong">When Things Go Wrong</h1>
-  <p>Almost every MPC puzzle comes down to one of three things: the wrong mode, the wrong bank, or the knobs belonging to an effect. Check those first.</p>
-  <div class="trouble"><p class="q">The pads start sequences instead of playing sounds.</p><p class="a">You&#8217;re in Sequence Mode. Press [[SAMPLE]].</p></div>
-  <div class="trouble"><p class="q">My sounds or sequences have disappeared.</p><p class="a">Look at the bank letter beside MAIN VOLUME. You&#8217;re probably on another bank. Press [[PAD BANK]] until the right letter is lit. If a sequence really has gone, load your last saved copy: [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]].</p></div>
-  <div class="trouble"><p class="q">Turning K1 to K3 doesn&#8217;t change my sound.</p><p class="a">If [[KNOB FX]] is lit, the knobs belong to the effect. Press [[KNOB FX]] to hand them back. Otherwise, the knob may need to &#8220;catch up&#8221;: keep turning towards the arrow on screen.</p></div>
-  <div class="trouble"><p class="q">No sound at all.</p><p class="a">Turn MAIN VOLUME up. Check your IEMs are fully pushed into PHONES. Check [[MUTE]] isn&#8217;t on and no pads are red; [[SHIFT]] + [[MUTE]] unmutes everything. Check the pad actually holds a sound (the screen shows a waveform).</p></div>
-  <div class="trouble"><p class="q">Pressing PLAY gives silence or the wrong music.</p><p class="a">In Sequence Mode, the flashing pad is the sequence that will play. Tap the one you want (with bank A lit) and press [[PLAY]].</p></div>
-  <div class="trouble"><p class="q">My recording is a mess of extra notes.</p><p class="a">Recording loops round and keeps adding. Press [[SHIFT]] + [[&#8722;]] to undo the whole take, or arm [[SEQ RECORD]], hold [[ERASE]] and press a pad to clear just that sound.</p></div>
-  <div class="trouble"><p class="q">My timing sounds sloppy.</p><p class="a">Switch on Record Quantisation ([[B3]] in Sequence Mode) before recording, or tidy afterwards with [[SHIFT]] + [[#14]] (TIME CORRECT). And check Swing ([[@K3]]) isn&#8217;t turned right up.</p></div>
-  <div class="trouble"><p class="q">A sound cuts off early.</p><p class="a">Check the Play page: <span class="scr">Mono</span> stops each hit when the next starts, and a <span class="scr">Mute Group</span> lets pads silence each other. Check Decay on Amp Env, and the End point on Trim.</p></div>
-  <div class="trouble"><p class="q">The mix sounds harsh or distorted.</p><p class="a">The meters are probably hitting the top. Lower Kit Volume ([[SHIFT]] + [[@K2]] on the Mix page) or individual pad volumes, and keep compressor Amount moderate.</p></div>
-  <div class="trouble"><p class="q">Sample recording won&#8217;t start.</p><p class="a">Check [[@K1]] Source is <span class="scr">Mic</span>, and lower [[@K3]] Threshold so quieter sounds can trigger it.</p></div>
-  <div class="trouble"><p class="q">I can&#8217;t hear the bass.</p><p class="a">Use your IEMs. The built-in speaker is too small for deep notes.</p></div>
-  <div class="trouble"><p class="q">I started a New Project by mistake.</p><p class="a">Anything you saved is safe. Load it from [[~Load Project]], [[~User]]. Work done since the last save is the only thing at risk, which is why each lesson ends with a save.</p></div>
-  <div class="trouble"><p class="q">It won&#8217;t charge.</p><p class="a">Use the supplied cable and a 5&#160;V, 2&#160;A charger. With some chargers, the MPC only charges while switched off.</p></div>
-  <div class="trouble"><p class="q">The screen doesn&#8217;t match this book.</p><p class="a">A firmware update may have changed something. Believe the screen, and check Akai&#8217;s online User Guide for the latest details.</p></div>
+  <p>Most puzzles come down to one of four things: the wrong <strong>mode</strong>, the wrong <strong>bank</strong>, the knobs belonging to <strong>Knob FX</strong>, or recording still <strong>armed</strong>. If you&#8217;re in a hurry, start with <a href="#known">Getting Back to a Known State</a>. Otherwise, find your symptom below. If the screen ever disagrees with this book, believe the screen, and please report it at github.com/slowphase/mpc-gently.</p>
+  <table class="tnav"><tr><th>Silent pads</th><td><a href="#t-empty">A pad seems empty<span class="pg" data-href="#t-empty"></span></a> &#183; <a href="#t-quiet">Too quiet<span class="pg" data-href="#t-quiet"></span></a></td></tr><tr><th>Grey waveforms</th><td><a href="#t-greypart">Parts greyed out<span class="pg" data-href="#t-greypart"></span></a> &#183; <a href="#t-grey">All grey, pad silent<span class="pg" data-href="#t-grey"></span></a></td></tr><tr><th>Wrong mode or bank</th><td><a href="#t-launch">Pads launch sequences<span class="pg" data-href="#t-launch"></span></a> &#183; <a href="#t-knobs">Knobs don&#8217;t respond<span class="pg" data-href="#t-knobs"></span></a></td></tr><tr><th>Recording and quantising</th><td><a href="#t-nostart">Won&#8217;t start<span class="pg" data-href="#t-nostart"></span></a> &#183; <a href="#t-wrongseq">Wrong sequence<span class="pg" data-href="#t-wrongseq"></span></a> &#183; <a href="#t-timing">Out of time<span class="pg" data-href="#t-timing"></span></a></td></tr><tr><th>Erasing or changing sequences</th><td><a href="#t-onedrum">Remove one drum<span class="pg" data-href="#t-onedrum"></span></a> &#183; <a href="#t-overwrote">Pattern changed<span class="pg" data-href="#t-overwrote"></span></a> &#183; <a href="#t-missing">Sounds missing<span class="pg" data-href="#t-missing"></span></a></td></tr><tr><th>Missing recordings</th><td><a href="#t-gone">Recording disappeared<span class="pg" data-href="#t-gone"></span></a> &#183; <a href="#t-samplenotsaved">Not saved separately<span class="pg" data-href="#t-samplenotsaved"></span></a></td></tr><tr><th>Saving and loading</th><td><a href="#t-notsaved">Not saved as expected<span class="pg" data-href="#t-notsaved"></span></a> &#183; <a href="#t-cantfind">Can&#8217;t find a project<span class="pg" data-href="#t-cantfind"></span></a> &#183; <a href="#t-previous">An earlier version<span class="pg" data-href="#t-previous"></span></a></td></tr><tr><th>Storage and sample packs</th><td><a href="#t-packs">Sample packs<span class="pg" data-href="#t-packs"></span></a> &#183; <a href="#storage">Internal or microSD<span class="pg" data-href="#storage"></span></a></td></tr></table>
+
+  <h2 class="sec tcat"><span class="tag">Part one</span>Sound and samples</h2>
+  <div class="tb" id="t-empty"><p class="q">A pad seems empty</p><dl>
+    <div><dt>Symptom</dt><dd>You tap a pad and hear nothing, and no waveform appears.</dd></div>
+    <div><dt>Cause</dt><dd>There&#8217;s no sample on that pad in this bank. Or you&#8217;re in Sequence Mode, where dim pads mean empty <em>sequences</em>, not missing sounds.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[SAMPLE]] so pads play sounds.</li><li>Check the bank letter beside MAIN VOLUME; press [[PAD BANK]] to find the bank you meant.</li><li>To look at a pad without playing it, hold [[SAMPLE]] and press the pad.</li><li>If it really is empty, load a sound with [[SAMPLE SELECT]] (Lesson 1).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Keep each kind of sound in its own bank, as this book does, and glance at the bank letter before you play.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-quiet"><p class="q">A sample plays silently or too quietly</p><dl>
+    <div><dt>Symptom</dt><dd>The waveform is there, but the sound is faint or missing.</dd></div>
+    <div><dt>Cause</dt><dd>Usually one of: the pad is muted; its Mix volume is low; a slow Attack hides the start; Start and End sit around a quiet part; soft playing with high Velocity Sens; or MAIN VOLUME or Kit Volume is low.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>In Sample Mode, press [[SHIFT]] + [[MUTE]] (UNMUTE ALL).</li><li>Press [[B1]] until <span class="scr">Mix</span> appears and raise [[@K1]] (Volume).</li><li>Press [[B1]] until <span class="scr">Amp Env</span> appears and lower [[@K1]] (Attack).</li><li>On the Trim page, check Start and End, then try Normalize ([[SHIFT]] + [[B2]]).</li><li>For even volume however you play, try [[SHIFT]] + [[#1]] (FULL LEVEL).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Change one setting at a time and tap the pad after each change, so you always know what made the difference.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-greypart"><p class="q">Parts of my waveform are greyed out</p><dl>
+    <div><dt>Symptom</dt><dd>The pad plays, but on the Trim page some of the waveform, usually at the beginning or end, looks grey or dimmed.</dd></div>
+    <div><dt>Cause</dt><dd>Start or End has been moved. The part outside them is skipped in normal playback, but it&#8217;s still in the sample unless [[SHIFT]] + [[#13]] (TRIM SAMPLE) has cut it away.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Select the pad and press [[B1]] until <span class="scr">Trim</span> appears.</li><li>Turn [[@K1]] (Start) all the way down and [[@K2]] (End) all the way up. The whole sound plays again.</li><li>If TRIM SAMPLE was used, the cut part is gone for good from this project; a saved copy from before the trim still has it.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Lesson 5&#8217;s &#8220;Five ways to cut a sound&#8221; table shows which cuts can be undone. Only TRIM SAMPLE is permanent.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-grey"><p class="q">My entire waveform is grey and the pad is silent</p><dl>
+    <div><dt>Symptom</dt><dd>The whole picture is grey, and tapping the pad plays nothing.</dd></div>
+    <div><dt>Cause</dt><dd>Akai&#8217;s guide says a muted sample&#8217;s waveform appears greyed out, and the sample won&#8217;t trigger. Muting changes nothing in the sound itself.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[SAMPLE]], then [[MUTE]].</li><li>Tap the pad so it turns yellow (unmuted). Red means muted.</li><li>Press [[MUTE]] again to finish, or press [[SHIFT]] + [[MUTE]] to unmute everything.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>After using MUTE in a performance, unmute everything before you start editing.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-chop"><p class="q">A chopped sample doesn&#8217;t behave</p><dl>
+    <div><dt>Symptom</dt><dd>Too many slices, too few, or the slices vanish when you leave Chop Mode.</dd></div>
+    <div><dt>Cause</dt><dd>Threshold chopping places slices where it hears new sounds, so the Threshold setting decides how many. The slices play from the pads only while Chop Mode is on; to give a slice a pad of its own, you Extract it.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>In Chop Mode, hold [[SHIFT]] and turn [[@K3]]: higher means fewer slices.</li><li>For equal slices regardless of content, set [[@K3]] to <span class="scr">Regions 8</span>.</li><li>To keep a slice, tap it and press [[SHIFT]] + [[B1]] (Extract). It lands on the next free pad (Lesson 6).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Leave a second of silence between sounds when you record, and trim the ends first. Note that editing slices by hand switches Chop Type to Manual, and slice edits can&#8217;t be undone.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-ringing"><p class="q">A sound keeps playing</p><dl>
+    <div><dt>Symptom</dt><dd>A sound rings on, or loops, after you&#8217;ve stopped playing.</dd></div>
+    <div><dt>Cause</dt><dd>LOOP is on for that pad; a long sound with a long Decay is overlapping itself in Poly; or One Shot is playing a long sample right to its end.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[STOP]] twice quickly to silence everything.</li><li>Select the pad. If [[LOOP]] is lit, press it.</li><li>Shorten Decay on the Amp Env page, or move End in on the Trim page.</li><li>To let your hand decide, switch to Note On ([[SHIFT]] + [[CHOP]]): the sound stops when you let go (Lesson 3).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Use Mono or a Mute Group for sounds that shouldn&#8217;t overlap, as you did for the bass.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-pitch"><p class="q">A sample plays at the wrong speed or pitch</p><dl>
+    <div><dt>Symptom</dt><dd>A sound is suddenly higher, lower, faster or slower than you expect.</dd></div>
+    <div><dt>Cause</dt><dd>Semi Tune or Fine Tune has moved; Warp is set (and at <span class="scr">Seq</span> it follows the sequence tempo); 16 Levels is still on, so each pad plays a different pitch; or the fader is set to control tuning.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[B2]] until <span class="scr">Tune</span> appears. Set Semi Tune to 0 and [[@K3]] (Warp) to <span class="scr">Off</span>.</li><li>If [[16 LEVELS]] is lit, press it to switch it off.</li><li>Check the fader&#8217;s job with [[SHIFT]] + [[#9]] (FADER).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Before copying a pad, make sure the original is the version you want: copies keep its tuning.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-knobs"><p class="q">The fader or knobs don&#8217;t respond</p><dl>
+    <div><dt>Symptom</dt><dd>You turn K1 to K3 or move the fader and nothing changes.</dd></div>
+    <div><dt>Cause</dt><dd>Knob FX is engaged, so K1 to K3 belong to the effect; or the control is waiting to catch up with the value on screen; or the fader controls something you&#8217;re not listening for, on the selected pad only.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>If [[KNOB FX]] is lit, press it to disengage.</li><li>Keep turning towards the value shown on screen. The fader picks up once it passes the current value.</li><li>Check the fader&#8217;s job with [[SHIFT]] + [[#9]], and tap the pad you mean to change.</li><li>To change how controls take over, look in [[SHIFT]] + [[#8]] (MIDI CONFIG): <span class="scr">Instant</span>, <span class="scr">Pickup</span> or <span class="scr">Scaled</span>.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd><strong>Before editing sample settings, check KNOB FX. If it is lit, press it to disengage it.</strong></dd></div>
+  </dl></div>
+  <div class="tb" id="t-fx"><p class="q">An effect doesn&#8217;t seem to work</p><dl>
+    <div><dt>Symptom</dt><dd>You turn the Knob FX controls, or press Pad FX, and hear no change.</dd></div>
+    <div><dt>Cause</dt><dd>Knob FX only affects pads that are lit in FX SELECT; it may be bypassed; its Mix may be low; Pad FX only works while you hold a pad in PAD FX mode, with something playing; the Compressor may be switched off.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Open FX SELECT ([[SHIFT]] + [[KNOB FX]]) and check the pads you&#8217;re playing are bright, and that the effect isn&#8217;t bypassed ([[B3]] is the Bypass).</li><li>Engage [[KNOB FX]] and raise [[@K3]] (Mix).</li><li>For Pad FX, press [[PLAY]] first, then [[PAD FX]], and hold a pad.</li><li>For the Compressor, open [[SHIFT]] + [[#5]] and check [[B3]] has switched it on.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Keep Lesson 3&#8217;s three ideas apart: choosing the effect and pads, handing the knobs to it ([[KNOB FX]]), and bypassing it ([[B3]] in FX SELECT).</dd></div>
+  </dl></div>
+
+  <h2 class="sec tcat"><span class="tag">Part two</span>Sequences and recording</h2>
+  <div class="tb" id="t-wrongseq"><p class="q">You recorded into the wrong sequence</p><dl>
+    <div><dt>Symptom</dt><dd>Your new part is in sequence 2, but you meant sequence 1.</dd></div>
+    <div><dt>Cause</dt><dd>Recording always goes into the <strong>selected</strong> (flashing) sequence, whichever that was.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Straight away, press [[SHIFT]] + [[&#8722;]] (UNDO) to remove the take.</li><li>Press [[SEQ]], check bank A, tap the sequence you meant, and record again.</li><li>If the wrong sequence was empty and you&#8217;d like to keep the take, copy it instead: select it, [[SHIFT]] + [[ERASE]] (COPY), and tap a <em>dim</em> (empty) sequence. Copying onto a sequence that already has hits isn&#8217;t described in Akai&#8217;s guide.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Follow the order in Lesson 2&#8217;s workflow diagram: choose and set up the sequence first, then arm, then play.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-nostart"><p class="q">Recording doesn&#8217;t seem to start</p><dl>
+    <div><dt>Symptom</dt><dd>You play the pads, but nothing is kept.</dd></div>
+    <div><dt>Cause</dt><dd>[[SEQ RECORD]] wasn&#8217;t armed (flashing) before [[PLAY]]; the count-in bar hasn&#8217;t finished; or, for sound recording, the Threshold is higher than your sound.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[STOP]]. Press [[SEQ RECORD]] so it flashes, then [[PLAY]].</li><li>If the <span class="scr">1234</span> icon is red, wait for one bar of clicks before playing.</li><li>Played something good without recording? [[SHIFT]] + [[SEQ RECORD]] (RECALL) puts the last loop you played into the sequence.</li><li>For sound recording, turn [[@K3]] (Threshold) down and check the Source (Lesson 6).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Watch for the flashing SEQ RECORD button before you start playing.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-launch"><p class="q">Pads launch sequences instead of sounds</p><dl>
+    <div><dt>Symptom</dt><dd>You tap a pad for a drum and a sequence starts instead.</dd></div>
+    <div><dt>Cause</dt><dd>You&#8217;re in Sequence Mode, where pads choose sequences.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[SAMPLE]].</li><li>Or, to record, press [[SEQ RECORD]]: once armed, the pads play sounds.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Check which mode button is lit before you play (Lesson 1, &#8220;Five words&#8221;).</dd></div>
+  </dl></div>
+  <div class="tb" id="t-overwrote"><p class="q">A recording changed a pattern you liked</p><dl>
+    <div><dt>Symptom</dt><dd>Extra notes have appeared in a finished loop, or a part has gone.</dd></div>
+    <div><dt>Cause</dt><dd>Recording overdubs: every pass adds what you play. Erasing removes a whole pad&#8217;s hits from the selected sequence.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Straight away: [[SHIFT]] + [[&#8722;]] (UNDO) removes everything recorded since recording began.</li><li>Extra hits from one pad only: arm [[SEQ RECORD]], hold [[ERASE]] and tap that pad. Then record it again.</li><li>Erased a whole sequence? Try [[SHIFT]] + [[&#8722;]]; Akai&#8217;s guide doesn&#8217;t say whether Undo restores an erased sequence.</li><li>Otherwise, [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]], and choose your most recent copy.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Before experimenting on a loop you love, copy it into a dim sketchpad sequence (9 to 14), and save a new project copy at each milestone.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-onedrum"><p class="q">You want to remove one drum, not everything</p><dl>
+    <div><dt>Symptom</dt><dd>The hats are wrong, but the kick and snare are perfect.</dd></div>
+    <div><dt>Cause</dt><dd>Erasing works pad by pad, inside the selected sequence only.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[SEQ]], light bank A and tap the sequence. Press [[SEQ RECORD]] so it flashes; you don&#8217;t need to press PLAY.</li><li>Check the right bank is lit, hold [[ERASE]] and tap the drum&#8217;s pad. Every hit from that pad goes from this sequence; the sound stays on the pad. Press [[STOP]].</li><li>Just one hit? Use [[SHIFT]] + [[SEQ]] (STEP EDIT): turn the ENCODER to the step, tap the pad to select its hit, and press [[B3]] to delete it.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Record one drum per pass, as in Lesson 2. Only erase with [[SEQ RECORD]] flashing: in Sample Mode, stopped and not armed, [[ERASE]] and a pad erases the <em>sound</em> from the pad.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-timing"><p class="q">The loop sounds out of time</p><dl>
+    <div><dt>Symptom</dt><dd>Hits feel early, late or uneven.</dd></div>
+    <div><dt>Cause</dt><dd>Record Quantisation was off; Swing is turned up; a hit landed on the wrong beat (quantising moves hits to the <em>nearest</em> grid line, which may be the wrong one); or the sequence length doesn&#8217;t match what you played.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Tidy what&#8217;s there: [[SHIFT]] + [[#14]] (TIME CORRECT), [[B2]] for all pads, [[@K1]] to 1/16, [[B3]] (<span class="scr">Do It!</span>).</li><li>In Sequence Mode, check [[@K3]] (Swing).</li><li>For a hit on the wrong beat, erase that pad and play it again with the metronome on.</li><li>Check [[@K1]] (Length) shows the number of bars you meant.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Switch Record Quantisation on ([[B3]] in Sequence Mode) and use the metronome and count-in, as set up in Lesson 2.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-jam"><p class="q">You want to jam without recording</p><dl>
+    <div><dt>Symptom</dt><dd>You&#8217;d like to play along with your loop without adding anything to it.</dd></div>
+    <div><dt>Cause</dt><dd>Pads only record while [[SEQ RECORD]] is armed.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Make sure [[SEQ RECORD]] is dark. If it&#8217;s flashing, press [[STOP]] (and [[SEQ RECORD]] once if it still flashes).</li><li>Press [[SEQ]], choose a sequence, press [[PLAY]], then press [[SAMPLE]] and play the pads freely.</li><li>Played something worth keeping? [[SHIFT]] + [[SEQ RECORD]] (RECALL) adds the last loop you played to the sequence.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Jam first, record second. RECALL is a safety net, not a plan.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-missing"><p class="q">A sequence plays, but some sounds are missing</p><dl>
+    <div><dt>Symptom</dt><dd>The loop runs, but a drum or the bass is silent.</dd></div>
+    <div><dt>Cause</dt><dd>The pad is muted; its hits were erased from <em>this</em> sequence (each sequence has its own hits); the sound on the pad was erased or replaced; or its volume is down.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>In Sample Mode, press [[SHIFT]] + [[MUTE]] (UNMUTE ALL).</li><li>Tap the pad: if it&#8217;s empty, the sound was removed; reload it, or go back to a saved copy.</li><li>Compare with another sequence: if the part plays there, it was erased from this one. Record it again (Lesson 7, &#8220;Same sounds, different notes&#8221;).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Erase pads only with the right sequence selected, and check the bank letter first.</dd></div>
+  </dl></div>
+
+  <h2 class="sec tcat"><span class="tag">Part three</span>Projects, storage and recovery</h2>
+  <div class="tb" id="t-gone"><p class="q">A recording seems to have disappeared</p><dl>
+    <div><dt>Symptom</dt><dd>You recorded a sound, and now you can&#8217;t find it.</dd></div>
+    <div><dt>Cause</dt><dd>It&#8217;s on a different pad or bank (Extract and RECALL use the <em>next free</em> pad); or you started a new project or loaded another before saving.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Press [[PAD BANK]] through the banks, tapping pads near where you recorded.</li><li>If it happened moments ago, open [[SAMPLE RECORD]] and press [[SHIFT]] + [[SAMPLE RECORD]] (RECALL): the MPC keeps the last 25 seconds of its input.</li><li>If the project was replaced, [[SHIFT]] + [[#16]], [[~Load Project]], [[~User]], and choose your most recent copy.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Save a new project copy as soon as you&#8217;ve recorded something you love.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-notsaved"><p class="q">A project wasn&#8217;t saved as expected</p><dl>
+    <div><dt>Symptom</dt><dd>Your saved project isn&#8217;t in the list, or it&#8217;s missing recent work.</dd></div>
+    <div><dt>Cause</dt><dd>The save page was left with [[B1]] (Cancel) instead of [[B3]] (<span class="scr">Do It!</span>); work happened after the save; or the project was saved to the microSD card, while [[~Load Project]], [[~User]] lists projects on the internal drive.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Open [[~Load Project]], [[~User]] and scroll the whole list.</li><li>If the name is there, load it: anything after that save will need redoing.</li><li>If you saved to the card, put it back in. Whether Load Project can open projects from the card isn&#8217;t described in Akai&#8217;s guide.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Always finish a save with [[B3]] and wait for it to complete. Save to the internal drive, and use the card for backups.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-samplenotsaved"><p class="q">A sample was recorded but not saved separately</p><dl>
+    <div><dt>Symptom</dt><dd>You recorded a sound, but never used SAVE SAMPLE. Is it safe?</dd></div>
+    <div><dt>Cause</dt><dd>A recording lives in your project. Saving the project keeps it; SAVE SAMPLE is only for using the sound in <em>other</em> projects.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Save the project ([[SHIFT]] + [[#16]], [[~Save Project]]). Your recording is kept with it.</li><li>If you want the sound elsewhere too, select its pad and press [[SHIFT]] + [[SAMPLE SELECT]] (SAVE SAMPLE).</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Before starting a new project, save the current one. Unsaved work is lost when you start or load another.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-cantfind"><p class="q">You can&#8217;t find your saved project</p><dl>
+    <div><dt>Symptom</dt><dd>You saved a project but don&#8217;t see it when loading.</dd></div>
+    <div><dt>Cause</dt><dd>You&#8217;re looking in [[~Demos]] or [[~Kits]] instead of [[~User]], or it was saved under a different name or to the microSD card.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>[[SHIFT]] + [[#16]], [[~Load Project]], [[~User]], then turn the ENCODER slowly through the whole list.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Use one naming pattern (GENTLY2, GENTLY3, &#8230;) so your projects sort together.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-packs"><p class="q">You can&#8217;t find a downloaded sample pack</p><dl>
+    <div><dt>Symptom</dt><dd>You downloaded sounds on a computer, and the MPC can&#8217;t see them.</dd></div>
+    <div><dt>Cause</dt><dd>Downloads live on the computer until you copy them to a microSD card. Akai describes computer access only for the card, not the internal drive.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>Copy the pack to a microSD card using SD Card Access (see <a href="#storage">Your Sounds and Storage</a>).</li><li>On the MPC, press [[SAMPLE SELECT]], then [[B2]] to switch to the external drive, and browse to the pack&#8217;s folder.</li><li>Check the files are a type the MPC imports (WAV is safest) and the pack&#8217;s notes for its firmware version.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Keep packs in a folder of your own on the card, apart from the <span class="scr">MPC Sample</span> folder.</dd></div>
+  </dl></div>
+  <div class="tb" id="t-previous"><p class="q">You want an earlier version back</p><dl>
+    <div><dt>Symptom</dt><dd>Today&#8217;s experiments went wrong, and you want yesterday&#8217;s track.</dd></div>
+    <div><dt>Cause</dt><dd>Every lesson saved a new copy, so each earlier version still exists.</dd></div>
+    <div><dt>Fix</dt><dd><ol><li>[[SHIFT]] + [[#16]], [[~Load Project]], [[~User]].</li><li>Choose the copy you want, for example <span class="scr">GENTLY6</span>, and press the ENCODER. If asked about unsaved changes, [[B3]] carries on and loses them; to keep them, back out and save a new copy first.</li><li>Carry on from there, and save under a new name when you&#8217;re done.</li></ol></dd></div>
+    <div><dt>Prevention</dt><dd>Never reach for a factory reset to undo a mistake: it deletes your saved work (see <a href="#known">Getting Back to a Known State</a>).</dd></div>
+  </dl></div>
+
+
 </section>
 
 <section class="chapter front" id="glossary">
   <h1 data-short="Glossary">Glossary</h1>
   <dl class="gloss">
+    <dt>Arm</dt><dd>To get recording ready. When [[SEQ RECORD]] flashes, recording is armed; it starts when you press PLAY.</dd>
+    <dt>Automation</dt><dd>Knob or fader moves recorded into a sequence, so a setting changes as it plays.</dd>
     <dt>Attack</dt><dd>How long a sound takes to reach full volume. Slow attack means a gentle fade-in.</dd>
     <dt>Bar</dt><dd>A group of beats. This book uses four beats per bar, counted &#8220;one, two, three, four&#8221;, a common pattern in electronic music.</dd>
     <dt>Bass</dt><dd>The lowest part of the music, giving it weight.</dd>
@@ -91,14 +277,17 @@
     <dt>Cutoff</dt><dd>The point where a filter starts removing sound.</dd>
     <dt>Decay</dt><dd>How a sound fades away after it starts. Release is similar, for sounds that play only while a pad is held.</dd>
     <dt>Envelope</dt><dd>A shape that changes something, usually volume or filter, over the life of a sound.</dd>
+    <dt>Extract</dt><dd>Copying one slice of a chopped sound to its own pad, leaving the original whole.</dd>
     <dt>Filter</dt><dd>Removes some frequencies. Low-pass makes sound darker; high-pass makes it thinner.</dd>
     <dt>Home note</dt><dd>The note a piece of music feels most at rest on. Also called the root.</dd>
-    <dt>Kit</dt><dd>The set of sounds on the pads of a project.</dd>
-    <dt>Knob FX</dt><dd>One effect, controlled by K1 to K3, applied to the pads you choose.</dd>
+    <dt>Kit</dt><dd>The set of sounds on the pads of a project. Factory kits are under Load Project, Kits.</dd>
+    <dt>Knob FX</dt><dd>One effect applied to the pads you choose. The KNOB FX button hands K1 to K3 to it; [[B3]] in FX SELECT bypasses it.</dd>
     <dt>Layering</dt><dd>Playing two or more sounds together to make a richer one.</dd>
     <dt>Loop</dt><dd>A short piece of music that repeats. Also the LOOP button, which repeats a single sound.</dd>
     <dt>Metronome</dt><dd>A click that marks the beat while you record.</dd>
     <dt>Mono / Poly</dt><dd>Mono: a new hit stops the last. Poly: hits overlap and ring together.</dd>
+    <dt>Mute Group</dt><dd>Pads in the same group cut each other off, so only one plays at a time.</dd>
+    <dt>Note On / One Shot</dt><dd>Note On: a sound plays only while its pad is held. One Shot: a tap plays the whole sound.</dd>
     <dt>Normalize</dt><dd>Raising a sound so its loudest point reaches full level.</dd>
     <dt>Note Repeat</dt><dd>Makes a held pad repeat steadily at a chosen note length.</dd>
     <dt>Octave</dt><dd>Twelve semitones. The same note, higher or lower.</dd>
@@ -118,6 +307,7 @@
     <dt>Slice</dt><dd>One piece of a chopped recording.</dd>
     <dt>Song</dt><dd>On the MPC Sample, a list of sequences played in order.</dd>
     <dt>Swing</dt><dd>Delaying every other small note slightly, for a looser, rolling feel.</dd>
+    <dt>Time Stretch</dt><dd>A Warp mode that changes a sound&#8217;s length without changing its pitch.</dd>
     <dt>Tempo</dt><dd>The speed of the music, in BPM.</dd>
     <dt>Threshold</dt><dd>A level that triggers something: recording, or where chop slices fall.</dd>
     <dt>Velocity</dt><dd>How hard a pad is hit, which usually sets how loud the sound plays.</dd>
@@ -141,8 +331,8 @@
   <div class="honest"><b class="h">About this book</b>
     <div class="smallprint">
       <p><em>MPC, Gently</em> by slowphase is a free, independent learning resource, not affiliated with or endorsed by Akai Professional or inMusic. Its text and original illustrations are licensed CC BY-SA 4.0. Akai Professional, MPC and MPC Sample are trademarks of inMusic Brands, Inc.; the Akai logos and top-panel diagram remain Akai&#8217;s and are not covered by that licence. Updates and corrections: github.com/slowphase/mpc-gently.</p>
-      <p>Checked against the Akai Professional <em>MPC Sample User Guide</em> v1.0 (online and PDF editions) and published notes on firmware 1.2 and 1.3. Revised November 2026.</p>
-      <p>Not yet tested on hardware. Still to confirm on a real MPC Sample: the names of factory folders other than <span class="scr">Snares</span>; whether Sequence Mode shares the bank letter with Sample Mode; how many semitones each 16 Levels pad moves; whether the Knob FX keeps sounding while the button is dark; whether RESAMPLE captures Knob FX; and whether Note Repeat follows pad pressure. The lessons are written so that none of these can stop you finishing.</p>
+      <p>Checked against the Akai Professional <em>MPC Sample User Guide</em> v1.3.0 (RevA) and earlier editions. Revised November 2026, informed by a beginner working through the lessons on firmware 1.3.0.</p>
+      <p>Still to confirm on hardware, among others: where an audio export is saved; how far apart the 16 Levels pads are, and how to switch 16 Levels off; whether Knob FX keeps sounding while the button is dark; whether RESAMPLE captures Knob FX; whether Sequence Mode shares the bank letter with Sample Mode; and factory folder names other than <span class="scr">Snares</span>. The lessons are written so that none of these can stop you finishing.</p>
     </div>
   </div>
 </section>

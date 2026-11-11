@@ -1,11 +1,11 @@
 <section class="cover">
+  <!--FIG:cover_blueprint-->
   <img class="akai" src="assets/akai_cream.svg" alt="Akai Professional">
-  <!--FIG:cover_pads-->
   <img class="mpclogo" src="assets/mpcsample_orange.svg" alt="MPC Sample">
   <div class="stripes"><div class="s1"></div><div class="s2"></div><div class="s3"></div></div>
   <div class="title">MPC, Gently</div>
   <div class="sub">From First Pad to First Track</div>
-  <div class="foot"><span>An illustrated beginner&#8217;s guide</span><span>Eight evenings</span></div>
+  <div class="foot"><span>An illustrated beginner&#8217;s guide</span><span>Eight lessons. One complete track.</span></div>
 </section>
 
 <section class="toc">
@@ -25,7 +25,9 @@
     <li><a href="#l8"><span class="n">08</span><span class="t">Your First Track<small>Outcome: a finished 80-second piece</small></span><span class="p" data-href="#l8"></span></a></li>
     <li class="group">Keep beside the MPC</li>
     <li><a href="#quickref"><span class="n">&#160;</span><span class="t">Quick Reference</span><span class="p" data-href="#quickref"></span></a></li>
-    <li><a href="#trouble"><span class="n">&#160;</span><span class="t">When Things Go Wrong</span><span class="p" data-href="#trouble"></span></a></li>
+    <li><a href="#known"><span class="n">&#160;</span><span class="t">Getting Back to a Known State<small>A one-page reset you can trust</small></span><span class="p" data-href="#known"></span></a></li>
+    <li><a href="#storage"><span class="n">&#160;</span><span class="t">Your Sounds and Storage<small>Where samples, projects and exports live</small></span><span class="p" data-href="#storage"></span></a></li>
+    <li><a href="#trouble"><span class="n">&#160;</span><span class="t">When Things Go Wrong<small>Symptom, cause, fix and prevention</small></span><span class="p" data-href="#trouble"></span></a></li>
     <li><a href="#glossary"><span class="n">&#160;</span><span class="t">Glossary</span><span class="p" data-href="#glossary"></span></a></li>
     <li><a href="#next"><span class="n">&#160;</span><span class="t">Where Next</span><span class="p" data-href="#next"></span></a></li>
   </ol>
@@ -33,27 +35,29 @@
 
 <section class="chapter front" id="welcome">
   <h1 data-short="Welcome">Welcome</h1>
-  <p>This is a small book for evenings. It assumes you know nothing about samplers, sequencers or music theory, and it doesn&#8217;t mind. You&#8217;ll need your MPC Sample, your in-ear monitors, and about forty unhurried minutes per lesson.</p>
+  <p>This is a small book for evenings. It assumes you know nothing about samplers, sequencers or music theory, and it doesn&#8217;t mind. You&#8217;ll need your MPC Sample and a pair of headphones or monitors. Most lessons&#8217; guided parts take 15 to 25 minutes; Lesson 7, the biggest, takes about half an hour. An optional <strong>Go Further</strong> challenge adds another 10 to 20 if you&#8217;d like to stay a while.</p>
   <p>Lesson 1 is a gentle exploration of the MPC and its demo. Then, across Lessons 2 to 8, you&#8217;ll build one original piece of slow, atmospheric electronic music, a little at a time: a heartbeat of drums, a haze of sound around it, a bassline underneath, a few sounds you shape yourself, a recording of something on your kitchen table, and finally an arrangement that goes somewhere. By the last page you&#8217;ll have a finished track of about eighty seconds that is entirely yours.</p>
-  <p>The aim isn&#8217;t to memorise the MPC. It&#8217;s to make music with it. Features appear only when the music needs them, and each musical idea is explained the first time you meet it.</p>
+  <h2 class="sec"><span class="tag">Two routes</span>Guided, or your own way</h2>
+  <p>Every lesson saves a project, such as <span class="scr">GENTLY2</span>, and the next lesson starts from it: the <strong>guided route</strong>. Go Further then saves a second copy with a B, such as <span class="scr">GENTLY2B</span>, and you can start the next lesson from that instead: the <strong>creative route</strong>. Both work for every later lesson, and the guided copy is always saved first. A few challenges change your main loop or shared sounds; they say so, and later lessons allow for it.</p>
+  <p>The aim isn&#8217;t to memorise the MPC but to make music with it, so features appear only when the music needs them.</p>
 
   <h2 class="sec"><span class="tag">How each lesson works</span>Six parts, always in the same order</h2>
   <dl class="controls">
-    <div><dt><strong>The Idea</strong></dt><dd>The musical thought behind the lesson, in plain words, usually with a picture.</dd></div>
-    <div><dt><strong>Meet the Controls</strong></dt><dd>A drawing of the MPC with the controls you&#8217;ll use lit up in orange.</dd></div>
-    <div><dt><strong>Let&#8217;s Make Something</strong></dt><dd>Numbered steps. Do them in order and you&#8217;ll arrive at the outcome.</dd></div>
-    <div><dt><strong>Have a Play</strong></dt><dd>Optional experiments for when you want to stay a while.</dd></div>
-    <div><dt><strong>What You&#8217;ve Learned</strong></dt><dd>A short summary, useful for a quick refresh before the next evening.</dd></div>
-    <div><dt><strong>Your Creation</strong></dt><dd>What you&#8217;ve made, and the name it&#8217;s saved under.</dd></div>
+    <div><dt><strong>The Idea</strong></dt><dd>The musical thought behind the lesson, in plain words.</dd></div>
+    <div><dt><strong>Meet the Controls</strong></dt><dd>A drawing with tonight&#8217;s controls lit in orange.</dd></div>
+    <div><dt><strong>Let&#8217;s Make Something</strong></dt><dd>Numbered steps, done in order.</dd></div>
+    <div><dt><strong>Go Further</strong></dt><dd>An optional challenge, with a little less help each time.</dd></div>
+    <div><dt><strong>What You&#8217;ve Learned</strong></dt><dd>A short summary for a quick refresh.</dd></div>
+    <div><dt><strong>Your Creation</strong></dt><dd>What you made, and its saved name.</dd></div>
   </dl>
 
   <h2 class="sec"><span class="tag">Reading the steps</span>How controls are written</h2>
   <table class="legend"><tr><td class="c">[[SEQ RECORD]]</td><td>a button</td></tr><tr><td class="c">[[@K1]]</td><td>a knob (K1, K2, K3)</td></tr><tr><td class="c">[[#4]]</td><td>a pad, by its number</td></tr><tr><td class="c">[[#A5]]</td><td>pad 5 in bank A</td></tr><tr><td class="c">[[~Save Project]]</td><td>words on the screen</td></tr><tr><td class="c">[[SHIFT]]&#160;+&#160;[[#16]]</td><td>hold the first, press the second</td></tr></table>
   <p>The words printed <em>underneath</em> a button or pad on the MPC are its second job. You reach them by holding [[SHIFT]]. So &#8220;[[SHIFT]] + [[#16]] (PROJECT)&#8221; means: hold SHIFT, press pad 16, and the Project menu opens.</p>
 
-  <div class="note"><b class="h">Listen through your IEMs</b>Plug your in-ear monitors into the <strong>PHONES</strong> socket. The built-in speaker switches off automatically, and you&#8217;ll hear the bass properly, which the little speaker can&#8217;t reproduce. In-ears are sensitive, so turn <strong>MAIN VOLUME</strong> right down before you plug in, then bring it up slowly.</div>
+  <div class="note"><b class="h">Listen on headphones or monitors</b>Plug headphones into <strong>PHONES</strong> (the speaker switches off), or connect powered monitors to <strong>AUDIO OUT</strong> on the back. Either way you&#8217;ll hear the bass the little speaker can&#8217;t reproduce. Protect your hearing: turn <strong>MAIN VOLUME</strong> right down before you plug in, then bring it up slowly.</div>
 
-  <div class="honest"><b class="h">A note on accuracy</b>Every button, menu and step in this book has been checked against Akai&#8217;s official <em>MPC Sample User Guide</em> and the notes for firmware 1.3, but not yet on a physical MPC Sample. Where the official guide is silent on something (for example, the exact names of every factory sample folder), the book says so and either gives you a way to check by ear or uses a method that works either way. If your screen ever disagrees with this book, believe the screen: Akai may have improved things in a later update.</div>
+  <div class="honest"><b class="h">A note on accuracy</b>Every button, menu and step has been checked against Akai&#8217;s official <em>MPC Sample User Guide</em> for firmware 1.3.0, but not every step has been confirmed on hardware yet. Where the guide is silent, the book says so and gives you a way to check by ear, or a method that works either way. If your screen ever disagrees with this book, believe the screen.</div>
 </section>
 
 <section class="chapter front" id="meet">
@@ -64,10 +68,11 @@
 
   <dl class="controls">
     <div><dt><strong>POWER</strong></dt><dd>Switches the MPC on and off. It isn&#8217;t on the top panel; look around the edges of the unit.</dd></div>
-    <div><dt><strong>PHONES</strong></dt><dd>A 3.5&#160;mm socket for your IEMs. MAIN VOLUME sets the level. Plugging in turns the speaker off.</dd></div>
+    <div><dt><strong>PHONES</strong></dt><dd>A 3.5&#160;mm socket for headphones. MAIN VOLUME sets the level. Plugging in turns the speaker off.</dd></div>
     <div><dt><strong>USB-C</strong></dt><dd>Power and charging. Akai recommend a 5&#160;V, 2&#160;A supply, and note that some cables and chargers only charge the MPC while it&#8217;s switched off.</dd></div>
-    <div><dt><strong>AUDIO IN / OUT</strong></dt><dd>6.35&#160;mm sockets for other equipment. Not needed in this book; the <strong>REC GAIN</strong> knob on the back sets the level of AUDIO IN.</dd></div>
-    <div><dt><strong>microSD slot</strong></dt><dd>On the left side. Optional extra storage. Everything in this book fits on the internal drive.</dd></div>
+    <div><dt><strong>AUDIO OUT</strong></dt><dd>6.35&#160;mm sockets for powered monitors or other suitable audio equipment.</dd></div>
+    <div><dt><strong>AUDIO IN</strong></dt><dd>6.35&#160;mm sockets for recording from external sources; the <strong>REC GAIN</strong> knob on the back sets the incoming level. Optional: this book uses the built-in microphone.</dd></div>
+    <div><dt><strong>microSD slot</strong></dt><dd>On the left side. Optional extra storage, and the only storage Akai describes a computer reaching. Everything in this book fits on the internal drive. See <a href="#storage">Your Sounds and Storage</a>.</dd></div>
   </dl>
   <p>The battery runs for around five hours. Its icon beside MAIN VOLUME is green when there&#8217;s plenty left, amber below about 29&#160;percent, and red when it&#8217;s time to charge.</p>
 
@@ -82,7 +87,7 @@
     <div><dt>[[SAMPLE]]</dt><dd>Pads play sounds. The screen shows the last sound you played and lets you change it.</dd></div>
     <div><dt>[[SEQ]]</dt><dd>Pads choose and launch sequences. Pads with something recorded glow green; empty ones are dim.</dd></div>
     <div><dt>[[PAD FX]]</dt><dd>Pads become effects you play over the whole mix while a sequence runs.</dd></div>
-    <div><dt>[[KNOB FX]]</dt><dd>K1, K2 and K3 control one effect, applied to the pads you choose.</dd></div>
+    <div><dt>[[KNOB FX]]</dt><dd>Hands K1, K2 and K3 to one effect. Which effect, and which pads it affects, is chosen in FX SELECT ([[SHIFT]] + [[KNOB FX]]).</dd></div>
   </dl>
   <div class="oops"><b class="h">The most common surprise</b>If you press a pad expecting a drum and a sequence starts instead, you&#8217;re in Sequence Mode. Press [[SAMPLE]] and the pads play sounds again.</div>
 

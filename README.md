@@ -9,7 +9,7 @@
 
 *A free, illustrated beginner's handbook for the [Akai MPC Sample](https://www.akaipro.com/mpc-sample).*
 
-Not an equipment manual. Not a music-theory course. Just eight relaxed evenings with your MPC Sample, a pair of headphones and no computer, building one piece of slow, atmospheric electronic music from a single drum loop to a finished track.
+Not an equipment manual. Not a music-theory course. Just eight approachable lessons with your MPC Sample, headphones or monitors and no computer, building one piece of slow, atmospheric electronic music from a single drum loop to a finished track.
 
 No prior musical knowledge required.
 
@@ -19,23 +19,23 @@ No prior musical knowledge required.
 
 | Edition | Best for | Size | Download |
 | --- | --- | --- | --- |
-| **iPad mini** (160 × 244 mm) | Portrait reading on the iPad mini, or any tablet or computer | 61 pages | [**Download the PDF**](https://github.com/slowphase/mpc-gently/releases/download/v0.9.0-preview/MPC-Gently.pdf) |
-| **Editable source** | Revising the guide or adapting it, within the [licence](LICENSE.md) | ZIP archive | [**Download the source**](https://github.com/slowphase/mpc-gently/releases/download/v0.9.0-preview/MPC-Gently-source.zip) |
+| **iPad mini** (160 × 244 mm) | Portrait reading on the iPad mini, or any tablet or computer | 78 pages | [**Download the PDF**](https://github.com/slowphase/mpc-gently/releases/download/v1.0.0/MPC-Gently.pdf) |
+| **Editable source** | Revising the guide or adapting it, within the [licence](LICENSE.md) | ZIP archive | [**Download the source**](https://github.com/slowphase/mpc-gently/releases/download/v1.0.0/MPC-Gently-source.zip) |
 
 There is one edition, sized for comfortable reading on an iPad mini without zooming. The same source is also in the [`source/`](source/) folder.
 
-**Handbook:** v0.9 Preview · **Firmware documented:** MPC Sample 1.3 · **Status:** pre-release, awaiting real-hardware testing
+**Handbook:** v1.0 · **Firmware documented:** MPC Sample 1.3 · **Status:** checked against Akai's guide; hardware testing in progress
 
 Future versions will appear on the [Releases page](https://github.com/slowphase/mpc-gently/releases).
 
-> **A note on this preview.** Every instruction was checked carefully against Akai's official *MPC Sample User Guide* and the notes for firmware 1.3, but the lessons have not yet been worked through end to end on a physical MPC Sample. A few device behaviours still need hands-on confirmation (they are listed [below](#version-compatibility)). If something on your unit behaves differently from the book, please [tell us](#corrections-and-feedback) so the next version can fix it.
+> **A note on this edition.** Every instruction was checked carefully against Akai's official *MPC Sample User Guide* and the notes for firmware 1.3, but the lessons have not yet been worked through end to end on a physical MPC Sample. A few device behaviours still need hands-on confirmation (they are listed [below](#version-compatibility)). If something on your unit behaves differently from the book, please [tell us](#corrections-and-feedback) so the next version can fix it.
 
 ---
 
 ## A look inside
 
 <p align="center">
-  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with Akai and MPC Sample logos and burnt-orange stripes, the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
+  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with Akai and MPC Sample logos and burnt-orange stripes (from an earlier edition), the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
 </p>
 
 <p align="center">
@@ -59,9 +59,9 @@ Lesson 1 is a gentle tour of the instrument. Lessons 2 to 8 build one original t
 5. **Shape the Sound.** Waveforms, envelopes, filters and resampling: three new sounds from one.
 6. **Everything Is an Instrument.** Record a mug with the built-in microphone, then trim and chop it.
 7. **Give It Somewhere to Go.** Turn one loop into an intro, main section, breakdown, lift and outro.
-8. **Your First Track.** Balance the mix and arrange it in Song Mode.
+8. **Your First Track.** Balance the mix, arrange it in Song Mode and export it as an audio file.
 
-The finished piece is about 80 seconds long at 84 BPM. Every lesson takes 30 to 45 relaxed minutes, ends with a saved project, and uses only the MPC Sample, its built-in sounds and your headphones.
+The finished piece is about 80 seconds long at 84 BPM. Each lesson's guided part takes 15 to 25 minutes (Lesson 7, the biggest, about half an hour) and ends with a saved project. An optional **Go Further** challenge of 10 to 20 minutes follows every lesson, with a little less help each time; you can carry on from either version. Everything uses only the MPC Sample, its built-in sounds and your headphones or monitors.
 
 The book explains each musical idea the first time you meet it and favours practical exercises over feature lists. When you want more depth, it points you to Akai's own User Guide.
 
@@ -91,24 +91,24 @@ Please update your MPC Sample using Akai's official instructions, not this handb
 
 ## Version compatibility
 
-The handbook has its own version number, separate from the firmware it describes. "v0.9 Preview" is the version of this book; "MPC Sample 1.3" is the firmware it was written for.
+The handbook has its own version number, separate from the firmware it describes. "v1.0" is the version of this book; "MPC Sample 1.3" is the firmware it was written for.
 
 | | Status |
 | --- | --- |
-| Handbook | v0.9 Preview |
+| Handbook | v1.0 |
 | Documented firmware | MPC Sample 1.3 |
-| Reference documentation | Akai *MPC Sample User Guide* v1.0 |
+| Reference documentation | Akai *MPC Sample User Guide* v1.3.0 (RevA) |
 | Hardware testing | Pending |
 | Newer firmware | Consult Akai's [User Guide](https://www.akaipro.com/guides/mpc-sample/introduction.htm) and [firmware page](https://www.akaipro.com/guides/mpc-sample/firmware_updates.htm) |
 
 Akai's guide doesn't settle every detail, so these behaviours still need confirming on a real MPC Sample:
 
-- The names of the factory sample folders (only "Snares" is named in the guide).
-- Whether Sequence Mode shares the pad-bank letter with Sample Mode.
-- How far apart in pitch the 16 Levels (Tune) pads are.
+- Where an exported audio file is saved, and how to copy it to a computer.
+- How far apart in pitch the 16 Levels (Tune) pads are, and how to switch 16 Levels off.
 - Whether a Knob FX keeps sounding while the KNOB FX button is dark.
 - Whether RESAMPLE captures Knob FX.
-- Which note lengths Note Repeat offers, and whether it follows pad pressure.
+- Whether Sequence Mode shares the pad-bank letter with Sample Mode.
+- The names of the factory sample folders (only "Snares" is named in the guide).
 
 The lessons are written so that none of these can stop you finishing your track.
 
