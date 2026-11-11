@@ -19,8 +19,8 @@ No prior musical knowledge required.
 
 | Edition | Best for | Size | Download |
 | --- | --- | --- | --- |
-| **iPad mini** (160 × 244 mm) | Portrait reading on the iPad mini, or any tablet or computer | 78 pages | [**Download the PDF**](https://github.com/slowphase/mpc-gently/releases/download/v1.0.0/MPC-Gently.pdf) |
-| **Editable source** | Revising the guide or adapting it, within the [licence](LICENSE.md) | ZIP archive | [**Download the source**](https://github.com/slowphase/mpc-gently/releases/download/v1.0.0/MPC-Gently-source.zip) |
+| **iPad mini** (160 × 244 mm) | Portrait reading on the iPad mini, or any tablet or computer | 78 pages | [**Download the PDF**](https://github.com/slowphase/mpc-gently/releases/latest/download/MPC-Gently.pdf) |
+| **Editable source** | Revising the guide or adapting it, within the [licence](LICENSE.md) | ZIP archive | [**Download the source**](https://github.com/slowphase/mpc-gently/releases/latest/download/MPC-Gently-source.zip) |
 
 There is one edition, sized for comfortable reading on an iPad mini without zooming. The same source is also in the [`source/`](source/) folder.
 
@@ -35,7 +35,7 @@ Future versions will appear on the [Releases page](https://github.com/slowphase/
 ## A look inside
 
 <p align="center">
-  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with a cream line drawing of the MPC Sample top panel, the Akai and MPC Sample logos and burnt-orange stripes, the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
+  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with a cream line drawing of the MPC Sample top panel, burnt-orange stripes and the title "mpc, gently" in cream and orange, the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
 </p>
 
 <p align="center">

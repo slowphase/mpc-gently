@@ -37,6 +37,8 @@ The hero title is set in **Fraunces** by The Fraunces Project Authors and **Jost
 - **Archivo** by The Archivo Project Authors (SIL OFL 1.1)
 - **Source Serif 4** by Adobe (SIL OFL 1.1)
 - **IBM Plex Mono** by IBM Corp. (SIL OFL 1.1)
+- **Fraunces** by The Fraunces Project Authors (SIL OFL 1.1): the cover title, a fixed Black instance (soft, largest optical size) made from the variable font
+- **Jost** by The Jost Project Authors (SIL OFL 1.1): the cover subtitle
 - Delivered through [Fontsource](https://fontsource.org/).
 
 ## How the handbook was made

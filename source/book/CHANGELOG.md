@@ -50,6 +50,12 @@ See "About this book" (p61) and the summary delivered with this revision.
 - p61, About this book: first paragraph reworded for public release (author, independence, licence, Akai artwork, repository link).
 - PDF author metadata set to slowphase.
 
+# v1.0.1 cover typography (November 2026)
+
+- Cover only (`content/01_front.html`, `style.css`): the title is now "mpc, gently" in Fraunces Black (soft, largest optical size; "mpc," cream, "gently" burnt orange), with the subtitle "from first pad to first track" in Jost, matching the GitHub hero. A small orange line, "A beginner's guide to the Akai MPC Sample", replaces the MPC SAMPLE wordmark, and the Akai logo is no longer on the cover. The footer's left side reads "An illustrated handbook".
+- New fonts in `fonts/`: `fraunces-black-soft.ttf` (a static instance of the Fraunces variable font: wght 900, opsz 144, SOFT 100, WONK 0) and `jost-latin-400-normal.woff2`, with their OFL licences.
+- The blueprint drawing, leader lines, stripes and palette are unchanged. Pages 2 to 78 are identical to v1.0.0 (text and rendering compared page by page); links and bookmarks unchanged.
+
 # v3 draft (November 2026)
 
 An editorial, teaching and technical revision of the published v0.9.0-preview edition (called "v2" in the briefs), followed by a final correction pass. 78 pages, up from 61. Same page size, typography, illustrations, eight lessons, project names, 84 BPM and the 80-second track. Primary reference: Akai *MPC Sample User Guide* v1.3.0 (RevA). Page numbers below are for the current v3 draft.

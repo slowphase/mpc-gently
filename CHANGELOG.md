@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.1, November 2026
+
+- Cover typography now matches the GitHub hero: the title "mpc, gently" in Fraunces (cream and orange) and the subtitle "from first pad to first track" in Jost.
+- The large MPC SAMPLE wordmark and the Akai logo are replaced on the cover by a small line, "A beginner's guide to the Akai MPC Sample", so the handbook's own title leads. The independence and trademark notice inside the book is unchanged.
+- The cover drawing, stripes and colours are unchanged, and pages 2 to 78 are identical to v1.0.0.
+
 ## v1.0.0, November 2026
 
 - Second edition: 78 pages, same eight lessons, project names, 84 BPM and 80-second track. Checked against Akai's *MPC Sample User Guide* v1.3.0 (RevA).

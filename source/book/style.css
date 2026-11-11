@@ -1,5 +1,7 @@
 @font-face { font-family: "IBM Plex Mono"; font-weight: 400; src: url(fonts/ibm-plex-mono-latin-400-normal.woff2); }
 @font-face { font-family: "IBM Plex Mono"; font-weight: 500; src: url(fonts/ibm-plex-mono-latin-500-normal.woff2); }
+@font-face { font-family: "Fraunces Black Soft"; src: url(fonts/fraunces-black-soft.ttf); }
+@font-face { font-family: "Jost"; font-weight: 400; src: url(fonts/jost-latin-400-normal.woff2); }
 @font-face { font-family: "Michroma"; src: url(fonts/michroma-latin-400-normal.woff2); }
 @font-face { font-family: "Archivo"; font-weight: 400; src: url(fonts/archivo-latin-400-normal.woff2); }
 @font-face { font-family: "Archivo"; font-weight: 500; src: url(fonts/archivo-latin-500-normal.woff2); }
@@ -271,3 +273,11 @@ table.ref.tune td { text-align: center; padding: .6mm 1.6mm; }
 #l6 .wrap, #l7 .wrap { margin-top: 2.5mm; }
 #l6 .play, #l7 .play { margin-bottom: 2mm; }
 #known li.warn > strong:first-child { color: var(--orange); }
+
+/* v1.0 cover typography: matches the GitHub hero (Fraunces Black, soft; Jost) */
+.cover .wordmark { position: absolute; left: 13mm; top: 137mm; z-index: 2; font: 400 66pt/1 "Fraunces Black Soft"; letter-spacing: 0; white-space: nowrap; }
+.cover .wordmark .a { color: var(--cream); }
+.cover .wordmark .b { color: var(--orange); }
+.cover .tagline { position: absolute; left: 14.4mm; top: 170mm; z-index: 2; font: 400 19pt/1.1 Jost; color: #E8D9BC; letter-spacing: .005em; }
+.cover .device { position: absolute; left: 14.6mm; top: 184.5mm; z-index: 2; font: 600 7.8pt Archivo; letter-spacing: .2em; text-transform: uppercase; color: var(--orange); }
+.cover .akai.small { top: 13mm; width: 24mm; }
