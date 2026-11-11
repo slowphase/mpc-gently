@@ -35,13 +35,13 @@ Future versions will appear on the [Releases page](https://github.com/slowphase/
 ## A look inside
 
 <p align="center">
-  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with Akai and MPC Sample logos and burnt-orange stripes (from an earlier edition), the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
+  <img src="previews/look-inside.jpg" alt="Three pages from the handbook: the charcoal cover with a cream line drawing of the MPC Sample top panel, the Akai and MPC Sample logos and burnt-orange stripes, the Lesson 2 opener with a beats-and-bars diagram, and a Lesson 8 page showing the song arrangement as energy blocks above numbered steps" width="800">
 </p>
 
 <p align="center">
   <img src="previews/controls-diagram.jpg" alt="Lesson 4 page: a drawing of the MPC Sample top panel with the controls for the lesson lit in orange, beside a short list of what each one does" width="390">
   &nbsp;
-  <img src="previews/shaping-sound.jpg" alt="Lesson 5 page: a waveform with Start and End markers, and three envelope shapes labelled pluck, drum hit and swell" width="390">
+  <img src="previews/shaping-sound.jpg" alt="Lesson 5 page: a waveform with Start and End markers, and a table of five ways to cut a sound, showing which can be undone" width="390">
 </p>
 
 <p align="center"><sub>A warm, retro look for evening sessions · each lesson lights up only the controls it uses · pictures that explain the sound, not just the buttons.</sub></p>
