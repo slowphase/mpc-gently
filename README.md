@@ -4,7 +4,6 @@
 
 <p align="center">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/licence-CC%20BY--SA%204.0-c4572a?style=flat-square&labelColor=2b2a28" alt="Licence: CC BY-SA 4.0"></a>
-  <a href="https://github.com/slowphase/mpc-gently/releases"><img src="https://img.shields.io/github/downloads/slowphase/mpc-gently/total?style=flat-square&label=downloads&color=c4572a&labelColor=2b2a28" alt="Total downloads"></a>
 </p>
 
 *A free, illustrated beginner's handbook for the [Akai MPC Sample](https://www.akaipro.com/mpc-sample).*
